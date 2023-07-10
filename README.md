@@ -60,7 +60,7 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 
 ## Success Criteria
 1) Tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform (possible Google sign-in)
->[ I often struggled with not having a place to find the right tutor]
+>[ I often struggled with not having a place to find the right tutor/I usually just got their phone number as a contact]
 2) Tutoring platform will contain useful filter options such as search by name, city, subject, and price range.
 >[I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged]
 3) Tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
