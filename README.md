@@ -3,6 +3,7 @@
 Fig.1 shows the picture created for TutoFlix using Dream AI[^1] generated on the prompt "Art representing Tutoring services, presenting a tutor and a student".
 
 ## 1. [Criteria A: Planning](#criteria-a-planning)
+
 1.1. [Definition of the problem](#problem-definition)
 
 1.2. [Rationale for proposed solution](#rationale-for-proposed-solution)
@@ -11,6 +12,7 @@ Fig.1 shows the picture created for TutoFlix using Dream AI[^1] generated on the
 
 1.4. [Success Criteria](#success-criteria)
 ## 2. [Criteria B: Design](#criteria-b-design)
+
 2.1[System Diagram](#system-diagram)
 
 2.2. [Wireframe Diagram](#wireframe-diagram)
@@ -26,6 +28,7 @@ Fig.1 shows the picture created for TutoFlix using Dream AI[^1] generated on the
 2.7. [Record of tasks](#record-of-tasks)
 
 ## 3. [Criteria C: Development](#criteria-c-development)
+
 3.1.[Tools and techniques used](#tools-and-techniques-used)
 
 3.2. [Sources](#sources)
@@ -35,8 +38,11 @@ Fig.1 shows the picture created for TutoFlix using Dream AI[^1] generated on the
 ## 4. [Criteria D: Functionality](#criteria-d-functionality)
  
 4.1 [SNS Video](#video-showcase)
+
 ## 5. [Criteria E: Evaluation](#criteria-e-evaluation)
+
 5.1 [Table of Evaluation](#evaluation-table)
+
 ## 6. [Appendix](#appendix)
 # Criteria A: Planning
 
@@ -73,7 +79,8 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 >[even though he thought in 2 different languages/would serve as a multi-language tutoring platform]
 # Criteria B: Design
 ## System Diagram
-
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/IA%20System%20DiagramLAST.png)
+Fig.2 shows the system diagram of the online tutoring platform.
 ## Wireframe Diagram
 
 ## ER Diagram
@@ -91,13 +98,13 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 | Task No | Planned Action                                              | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 |1|Write problem definition (Planning)|Have a clear problem that states the issue, its consequences, and a clear approach and solution that is being proposed| 20 min |8.7.2023 |A | 
-|2|First client meeting: success criteria and required information (Planning)|Have a first client meeting and get the client to state success criteria and basic information needed in order to establish a design statement and rationale for the solution that will be proposed to the client | 35 min|10.7.2023 |A |
-|3|Write the first version of the rationale for the proposed solution and design statement (Planning)|Write down the rationale and design statement and present it to the client |35 min |10.7.2023 |A |
-|4| | | | | |
-|5| | | | | |
-|6| | | | | |
-|7| | | | | |
-|8| | | | | |
+|2|First client meeting: success criteria and required information (Planning)|Have a first client meeting and get the client to state the success criteria and basic information needed in order to establish a design statement and rationale for the solution that will be proposed to the client | 35 min|10.7.2023 |A |
+|3|Write the first version of the rationale for the proposed solution and design statement (Planning)|Write down the rationale and design statement that will be presented to the client |35 min |10.7.2023 |A |
+|4| second Client meeting| | | | |
+|5| Rewrite SC| | | | |
+|6| System diagram| | | | |
+|7| Rewrite DS | | | | |
+|8| Add table of content (Planning)	 | Add table of content at the top of the file| 15 min|12.7.2023 | A|
 |9| | | | | |
 |10| | | | | |
 |11| | | | | |
