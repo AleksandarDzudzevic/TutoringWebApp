@@ -142,7 +142,7 @@ Fig.2 shows the system diagram of the online tutoring platform.
 
 
 # Appendix
-![]([https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_consultation1.png](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png))
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png)
 The first client consultation was done remotely on July 10th, 2023 13:15 pm, during which success criteria were established.
 
 [^1]: Dream AI prompt: "Art representing Tutoring services, presenting a tutor and a student". 6 July 2023 https://dream.ai/create
