@@ -101,13 +101,13 @@ Fig.2 shows the system diagram of the online tutoring platform.
 | Task No | Planned Action                                              | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 |1|Write problem definition (Planning)|Have a clear problem that states the issue, its consequences, and a clear approach and solution that is being proposed| 20 min |8.7.2023 |A | 
-|2|First client meeting: success criteria and required information (Planning)|Have a first client meeting and get the client to state the success criteria and basic information needed in order to establish a design statement and rationale for the solution that will be proposed to the client | 35 min|10.7.2023 |A |
+|2|First client meeting: success criteria and required information (Planning)|Have a first client meeting and get the client to state the success criteria and basic information needed in order to establish a design statement and rationale for the solution that will be proposed to the client | 30 min|10.7.2023 |A |
 |3|Write the first version of the rationale for the proposed solution and design statement (Planning)|Write down the rationale and design statement that will be presented to the client |35 min |10.7.2023 |A |
-|4| second Client meeting| | | | |
-|5| Rewrite SC| | | | |
-|6| System diagram| | | | |
-|7| Rewrite DS | | | | |
-|8| Add table of content (Planning)	 | Add table of content at the top of the file| 15 min|12.7.2023 | A|
+|4| Rewrite rationale for the proposed solution (Planning| Rewrite design statement so that it better explains methodology and tools that will be used for this web application development| 15 min | 11.7.2023| A|
+|5| Design first version of the System diagram (Design)| Have the system diagram of the web application finsihed|20 min | 13.7.2023| B| 
+|6| Add table of content (Planning)	 | Add table of content at the top of the file that will allow easier inspection of the project| 15 min|13.7.2023 | A|
+|7| Construct the first version of database structures needed for the web application (Design)| Have the sketch of the databases for the initial idea of how the web application will be structured| 14.7.2023|30 min| B|
+|8| | | | | |
 |9| | | | | |
 |10| | | | | |
 |11| | | | | |
@@ -142,6 +142,8 @@ Fig.2 shows the system diagram of the online tutoring platform.
 
 
 # Appendix
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_consultation1.png)
+The first client consultation was done remotely on July 10th, 2023 13:15 pm, during which success criteria were established.
 [^1]: Dream AI prompt: "Art representing Tutoring services, presenting a tutor and a student". 6 July 2023 https://dream.ai/create
 [^2]: Sengar, Ritesh. “Python vs PHP: Which Is Better for Web Development?” Hackernoon, 7 Jan. 2021, hackernoon.com/python-vs-php-which-is-better-for-web-development-cj1236mj. 
 [^3]: "Welcome to Flask." Flask Documentation, 15 Jan. 2023, flask.palletsprojects.com/en/2.1.x/. 
