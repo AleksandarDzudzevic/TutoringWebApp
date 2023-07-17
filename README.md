@@ -106,7 +106,7 @@ Fig.2 shows the system diagram of the online tutoring platform.
 |4| Rewrite rationale for the proposed solution (Planning| Rewrite design statement so that it better explains methodology and tools that will be used for this web application development| 15 min | 11.7.2023| A|
 |5| Design first version of the System diagram (Design)| Have the system diagram of the web application finsihed|20 min | 13.7.2023| B| 
 |6| Add table of content (Planning)	 | Add table of content at the top of the file that will allow easier inspection of the project| 15 min|13.7.2023 | A|
-|7| Construct the first version of database structures needed for the web application (Design)| Have the sketch of the databases for the initial idea of how the web application will be structured| 14.7.2023|30 min| B|
+|7| Construct the first version of database structures needed for the web application (Design)| Have the sketch of the databases for the initial idea of how the web application will be structured| 30 min| 14.7.2023|B|
 |8| | | | | |
 |9| | | | | |
 |10| | | | | |
