@@ -87,7 +87,8 @@ Fig.2 shows the system diagram of the online tutoring platform.
 ## Wireframe Diagram
 
 ## ER Diagram
-
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/ER%20DIAGRAM_IA_1.png)
+Fig.4 Shows ER diagram of the online tutoring platform, which represents the database structure of the web application
 ## UML Diagram
 
 ## Flow Diagram
