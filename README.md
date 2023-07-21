@@ -107,8 +107,8 @@ Fig.2 shows the system diagram of the online tutoring platform.
 |5| Design first version of the System diagram (Design)| Have the system diagram of the web application finsihed|20 min | 13.7.2023| B| 
 |6| Add table of content (Planning)	 | Add table of content at the top of the file that will allow easier inspection of the project| 15 min|13.7.2023 | A|
 |7| Construct the first version of database structures needed for the web application (Design)| Have the sketch of the databases for the initial idea of how the web application will be structured| 30 min| 14.7.2023|B|
-|8| | | | | |
-|9| | | | | |
+|8|Design first version of the ER diagram (Design)| Design the first version of the diagram representing Data structure of the web application| 25 min|20.7.2023 | B|
+|9| Create databases and start with the program development (Development)|Start coding of the web application and create databases  |45 min | 21.7.2023|C |
 |10| | | | | |
 |11| | | | | |
 |12| | | | | |
