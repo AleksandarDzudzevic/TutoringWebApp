@@ -102,16 +102,16 @@ Fig.4 Shows ER diagram of the online tutoring platform, which represents the dat
 | Task No | Planned Action                                              | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 |1|Write problem definition (Planning)|Have a clear problem that states the issue, its consequences, and a clear approach and solution that is being proposed| 20 min |8.7.2023 |A | 
-|2|First client meeting: success criteria and required information (Planning)|Have a first client meeting and get the client to state the success criteria and basic information needed in order to establish a design statement and rationale for the solution that will be proposed to the client | 30 min|10.7.2023 |A |
+|2|First client meeting: success criteria and required information (Planning)|Have a first client meeting and get the client to state the success criteria and basic information needed to establish a design statement and rationale for the solution that will be proposed to the client | 30 min|10.7.2023 |A |
 |3|Write the first version of the rationale for the proposed solution and design statement (Planning)|Write down the rationale and design statement that will be presented to the client |35 min |10.7.2023 |A |
 |4| Rewrite rationale for the proposed solution (Planning| Rewrite design statement so that it better explains methodology and tools that will be used for this web application development| 15 min | 11.7.2023| A|
 |5| Design first version of the System diagram (Design)| Have the system diagram of the web application finsihed|20 min | 13.7.2023| B| 
 |6| Add table of content (Planning)	 | Add table of content at the top of the file that will allow easier inspection of the project| 15 min|13.7.2023 | A|
 |7| Construct the first version of database structures needed for the web application (Design)| Have the sketch of the databases for the initial idea of how the web application will be structured| 30 min| 14.7.2023|B|
-|8|Design first version of the ER diagram (Design)| Design the first version of the diagram representing Data structure of the web application| 25 min|20.7.2023 | B|
-|9| Create databases and start with the program development (Development)|Start coding of the web application and create databases  |45 min | 21.7.2023|C |
-|10| | | | | |
-|11| | | | | |
+|8|Design first version of the ER diagram (Design)| Design the first version of the diagram representing the Data structure of the web application| 25 min|20.7.2023 | B|
+|9| Create databases and start with the program development (Development)|Start coding the web application and create databases  |45 min | 21.7.2023|C |
+|10| Design the web applications logo and its color panel with the help of the client (see in [appendix](#appendix)) (Design)|Design the logo that would be used on the client's web application and the colors that will dictate the template|30 min|23.7.2023|B |
+|11| Create the first version of the login and registration system and connect it to the database (Developing)|Create a functional login/registration system and connect it to the web application's database|1h|24.7.2023 |C|
 |12| | | | | |
 |13| | | | | |
 |14| | | | | |
