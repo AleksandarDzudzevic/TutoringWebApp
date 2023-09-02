@@ -82,7 +82,7 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 >[even though he thought in 2 different languages/would serve as a multi-language tutoring platform]
 # Criteria B: Design
 ## System Diagram
-![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/IA%20System%20DiagramLAST.png)
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/IA%20System%20DiagramVersionLast.png)
 Fig.2 shows the system diagram of the online tutoring platform.
 ## Wireframe Diagram
 
