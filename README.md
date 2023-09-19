@@ -111,9 +111,9 @@ Fig.4 Shows ER diagram of the online tutoring platform, which represents the dat
 |8|Design first version of the ER diagram (Design)| Design the first version of the diagram representing the Data structure of the web application| 25 min|20.7.2023 | B|
 |9| Create databases and start with the program development (Development)|Start coding the web application and create databases  |45 min | 21.7.2023|C |
 |10| Design the web applications logo and its color panel with the help of the client (see in [appendix](#appendix)) (Design)|Design the logo that would be used on the client's web application and the colors that will dictate the template|30 min|23.7.2023|B |
-|11| Create the first version of the login and registration system and connect it to the database (Developing)|Create a functional login/registration system and connect it to the web application's database|1h|24.7.2023 |C|
+|11| Create the first version of the login and registration system |Create a functional login/registration system |1 h|24.7.2023 |C|
 |12| Design second version of the System diagram (Design)| Have the system diagram showcase both client and server device|20 min | 15.8.2023| B| 
-|13| | | | | |
+|13|Connect login/registration to the database (Developing)|Established connection now add/checks newly registered/ already existing accounts to/with the data database|20 min| 22.8.2023|C|
 |14| | | | | |
 |15| | | | | |
 |16| | | | | |
