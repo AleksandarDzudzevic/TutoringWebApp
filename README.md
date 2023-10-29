@@ -68,17 +68,17 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 
 
 ## Success Criteria
-1) Tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform (possible Google sign-in)
+1) The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform.
 >[ I often struggled with not having a place to find the right tutor/I usually just got their phone number as a contact]
-2) Tutoring platform will contain useful filter options such as search by name, city, subject, and price range.
+2) The tutoring platform will contain useful filter options such as search by name, city, subject, and price range.
 >[I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged]
-3) Tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
+3) The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 >[in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful]
-4) Tutoring platform will have a grading system for tutors and will list tutors by highest average grade so that the best-performing ones gain the most exposure.
+4) The tutoring platform will have a grading system for tutors and will list tutors by highest average grade so that the best-performing ones gain the most exposure.
 >[ which usually turned out to be better at selling their services than actually teaching]
-5) Tutoring platform will allow students to see all posts by a specific tutor.
+5) The tutoring platform will allow students to see all posts by a specific tutor.
 >[was unsuccessful as the students that tried to find him couldn't due to many other tutors teaching the same subject.]
-6) Tutoring platform will have multiple language features.
+6) The tutoring platform will have multiple language features.
 >[even though he thought in 2 different languages/would serve as a multi-language tutoring platform]
 # Criteria B: Design
 ## System Diagram
@@ -114,8 +114,8 @@ Fig.4 Shows ER diagram of the online tutoring platform, which represents the dat
 |11| Create the first version of the login and registration system |Create a functional login/registration system |1 h|24.7.2023 |C|
 |12| Design second version of the System diagram (Design)| Have the system diagram showcase both client and server device|20 min | 15.8.2023| B| 
 |13|Connect login/registration to the database (Developing)|Established connection now add/checks newly registered/ already existing accounts to/with the data database|20 min| 22.8.2023|C|
-|14| | | | | |
-|15| | | | | |
+|14| Redo Login and Register UI to match the general template used for the web application | Make the registration system UI fit better into the web app style. | 20 min| 1.9.2023 | C|
+|15| Add password policy and create an interactive response to the user's input for the password. |Make a password policy and add an emoji reaction showing if the user followed the policy. | 25 min|16.9.2023 | C|
 |16| | | | | |
 |17| | | | | |
 |18| | | | | |
