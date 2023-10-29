@@ -116,7 +116,7 @@ Fig.4 Shows ER diagram of the online tutoring platform, which represents the dat
 |13|Connect login/registration to the database (Developing)|Established connection now add/checks newly registered/ already existing accounts to/with the data database|20 min| 22.8.2023|C|
 |14| Redo Login and Register UI to match the general template used for the web application | Make the registration system UI fit better into the web app style. | 20 min| 1.9.2023 | C|
 |15| Add password policy and create an interactive response to the user's input for the password. |Make a password policy and add an emoji reaction showing if the user followed the policy. | 25 min|16.9.2023 | C|
-|16| | | | | |
+|16| Add JWT token in order to improve web app security and only allow feature access to logged-in users | Only registered users can access the application features| 30 min | 21.9.2023| C|
 |17| | | | | |
 |18| | | | | |
 |19| | | | | |
