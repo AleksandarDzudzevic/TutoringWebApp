@@ -90,7 +90,8 @@ Fig.2 shows the system diagram of the online tutoring platform.
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/ER%20DIAGRAM_IA_1.png)
 Fig.4 Shows ER diagram of the online tutoring platform, which represents the database structure of the web application
 ## UML Diagram
-
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/UML_IA.png)
+Fig. 8 shows the class used for manipulating database, used for the website application
 ## Flow Diagram
 
 ## Test plan
@@ -111,15 +112,15 @@ Fig.4 Shows ER diagram of the online tutoring platform, which represents the dat
 |8|Design first version of the ER diagram (Design)| Design the first version of the diagram representing the Data structure of the web application| 25 min|20.7.2023 | B|
 |9| Create databases and start with the program development (Development)|Start coding the web application and create databases  |45 min | 21.7.2023|C |
 |10| Design the web applications logo and its color panel with the help of the client (see in [appendix](#appendix)) (Design)|Design the logo that would be used on the client's web application and the colors that will dictate the template|30 min|23.7.2023|B |
-|11|Create a UML diagram of the web application| Have a clear visual representation of the web application's structure and interconnectivity between its features|23.7.2023||
+|11|Create the first version of the wireframe diagram of the web application| Have a clear visual representation of the web application's structure and interconnectivity between its features|23.7.2023||
 |12| Create the first version of the login and registration system |Create a functional login/registration system |1 h|30.7.2023 |C|
 |13| Design second version of the System diagram (Design)| Have the system diagram showcase both client and server device|20 min | 15.8.2023| B| 
 |14|Connect login/registration to the database (Developing)|Established connection now add/checks newly registered/ already existing accounts to/with the data database|20 min| 23.8.2023|C|
 |15| Redo Login and Register UI to match the general template used for the web application | Make the registration system UI fit better into the web app style. | 20 min| 1.9.2023 | C|
 |16| Add password policy and create an interactive response to the user's input for the password. |Make a password policy and add an emoji reaction showing if the user followed the policy. | 25 min|16.9.2023 | C|
 |17| Add JWT token in order to improve web app security and only allow feature access to logged-in users | Only registered users can access the application features| 30 min | 21.9.2023| C|
-|18| | | | | |
-|19| | | | | |
+|18| Create the UML diagram for the web application |Create the UML diagram for the class used for manipulating databases for the web application | 20 min|26.9.2023 | B|
+|19| Update the wireframe diagram so that it shows the new design of the web application|Have the wireframe diagram show an accurate version of the web application|20 min |28.9.2023 | B |
 |20| | | | | |
 |21| | | | | |
 |22| | | | | |
