@@ -47,7 +47,7 @@ Fig.1 shows the picture created for TutorFlix using Dream AI[^1] generated on th
 # Criteria A: Planning
 
 ## Problem Definition
-As a student, I often struggled with not having a place to find the right tutor. Just like many, I ended up going with the tutors recommended by friends or relatives, which usually turned out to be better at selling their services than actually teaching and that bothered me. I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged. I got contacted by my client, a teacher, who saw a similar issue and explained that in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful as the students who wanted to find him couldn't due to many other tutors teaching the same subject. Even with less experience, charging too much, and living far away, the number of other advertisements made it impossible for him to find students, even though he thought in 2 different languages which gave him a competitive advantage. To change this, my client requested a web application that would serve as a multi-language tutoring platform where students can find tutors that are well-ranked not well-advertised, live close to them, and are within their price range so that tutoring services can finally be level that they are supposed to. This problem definition was established with the help of the data gathered through questionnaires. (referred to in the [appendix](#appendix))
+As a student, I often struggled with not having a place to find the right tutor. Just like many, I ended up going with the tutors recommended by friends or relatives, which usually turned out to be better at selling their services than actually teaching and that bothered me. I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged. I got contacted by my client, a teacher, who saw a similar issue and explained that in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful as the students who wanted to find him couldn't due to many other tutors teaching the same subject. Even with less experience, charging too much, and living far away, the number of other advertisements made it impossible for him to find students, even though he was better educated than other tutors which gave him a competitive advantage. To change this, my client requested a web application that would serve as a tutoring platform where students can find tutors that are well-ranked not well-advertised, live close to them, and are within their price range so that tutoring services can finally be level that they are supposed to. Furthermore, this app aims to constantly interact with users establishing a relationship filled with trust, which isn't the case with current platforms which often seem sketchy. This problem definition was established with the help of the data gathered through questionnaires. (referred to in the [appendix](#appendix))
 
 
 
@@ -70,22 +70,23 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 ## Success Criteria
 1) The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform.
 >[ I often struggled with not having a place to find the right tutor/I usually just got their phone number as a contact]
-2) The tutoring platform will contain useful filter options such as search by name, city, subject, and price range.
+2) The tutoring platform will contain useful filter options such as search by title, country, subject, and price range.
 >[I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged]
 3) The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 >[in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful]
-4) The tutoring platform will have a grading system for tutors and will list tutors by highest average grade so that the best-performing ones gain the most exposure.
+4) The tutoring platform will have a grading system for tutors and list tutors by highest average grade so that the best-performing ones gain the most exposure.
 >[ which usually turned out to be better at selling their services than actually teaching]
 5) The tutoring platform will allow students to see all posts by a specific tutor.
 >[was unsuccessful as the students that tried to find him couldn't due to many other tutors teaching the same subject.]
-6) The tutoring platform will have multiple language features.
->[even though he thought in 2 different languages/would serve as a multi-language tutoring platform]
+6) The web application will have options to communicate with users through email for features such as sending the forgotten password, or information about application updates.
+> This app aims to constantly interact with users establishing a relationship filled with trust, which isn't the case with current platforms which often seem sketchy.
 # Criteria B: Design
 ## System Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/IA%20System%20DiagramVersionLast.png)
 Fig.2 shows the system diagram of the online tutoring platform.
 ## Wireframe Diagram
-
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/Wireframe%20IA.png)
+Fig.3 Shows the wireframe diagram 
 ## ER Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/ER%20DIAGRAM_IA_1.png)
 Fig.4 Shows the ER diagram of the online tutoring platform, which represents the database structure of the web application
@@ -97,6 +98,13 @@ Fig. 8 shows the class used for manipulating the database, used for the website 
 ## Test plan
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
 |-----------|-----------|--------|-----------|-----------------|----|
+|1|Account registration system|Unit testing|Have a fully functional registration system that checks if the proper values are input in the email and password fields|(1) Run app.py (2) Click the register button on the login screen (3) Input a username: TesterSNS, email: testersns@gmail.com, password:abc123! following the password policy, account type: Student and Country: England that will be used for this tester account(4) After filling in all the fields create an account (5) Try to log in with the new account to see if it exists now| After following the procedure, a user should be able to login using the credentials of the newly created account|
+|2|Tutor list inspecting from a student account type|Unit testing| Be able to access the tutor list and see all the available tutors and their tutoring posts for different subjects.|(1)Run Project_4.py(2)Login using adequate credentials for the tester account created in test no.1. (3)Choose the "see all tutors" option from the navigation bar.(4)Check if the redirected page shows a table containing the id, username, and country for each tutor| The student is able to access the tutor list from the main menu and will be able to see all the tutorflix tutors| 
+
+|3|Accesing a specific user's profile from the user list|Integration testing| Access a specific user's profile  by choosing it from the user list|(1)Run Project_4.py(2)Login using adequate credentials for the tester account created in the test no.1. (3)Choose the "see all users" option from the navigation bar. (4) Choose a desired user and click on their nickname to get redirected to his profile. (5) Check if his profile and posts  (if there are any) are displayed successfully| A user can choose to view a specific creator profile that he is interested in.|
+|4|Finding a specific user through filter options in the user table|Integration testing|Find a user through username search or by choosing a specific city of interest |(1)Run Project_4.py(2)Login using adequate credentials for the tester account created int test no.1. (3)Choose the "see all users" option from the navigation bar. (4) Choose a city and see if only users from that city appear in the user table. (5) Now type a certain username or a part of it and see if only adequate users appear | Both filter functions work and are properly integrated with the user table database and main menu|
+|5|Code practices around HTML and Python, regarding usage of loops and their nesting  |Code Review| Replace repeating functions and features using better coding practices by using loops, and make the code more efficient by nesting loops.|(1) Review Project_4.py python code and HTML code to see any repetitive parts. (2) Create an algorithm that would replace the repetitive part using loops and nesting them if necessary. (3) Replace the old repetitive code and connect new algorithm and HTML code to the main SNS code | The code now uses loops for the profile accessing and for the learn about city feature.| 
+|6| Commenting on complex code practices |Code Review| Adding comments that would explain the usage of more complex programming tools and algorithms to help future potential developers| (1) Review the python Project_4.py code and focus on the more complex algorithms and routes that have unique features (2) Add a comment explaining their usage and function in the code| The code is easier to understand and is more open for future co-development|
 
 
 ## Record of Tasks
