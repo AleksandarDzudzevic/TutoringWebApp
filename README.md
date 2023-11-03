@@ -94,9 +94,14 @@ Fig.3 Shows the wireframe diagram
 Fig.4 Shows the ER diagram of the online tutoring platform, which represents the database structure of the web application
 ## UML Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/UML_IA.png)
-Fig. 8 shows the class used for manipulating the database, used for the website application
+Fig.5 shows the class used for manipulating the database, used for the website application
 ## Flow Diagram
-
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/FC_1_User%20list%20flow%20diagram%20-%20Flowchart.png)
+Fig.6 shows a Flow diagram that visually represents the registration process for the Tutorflix web application
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/FC_2-fthe%20profile%20feature%20-%20Flowchart.png)
+Fig.7 shows a Flow diagram that visually represents the feature of viewing a specific profile
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/FC_3_User%20list%20feature%20flow%20diagram%20-%20Flowchart%20.png)
+Fig.8 shows a Flow diagram that visually represents the filtering feature for the tutor list of the Tutorflix web application.
 ## Test plan
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
 |-----------|-----------|--------|-----------|-----------------|----|
@@ -134,11 +139,11 @@ Fig. 8 shows the class used for manipulating the database, used for the website 
 |20|  Perform 2 unit tests explained in the test plan section (Testing)  | Perform tests of the registration system and the tutor list feature  |  15 min | 6.10.2023  |  B   |
 |21| Test accessing the tutors list from the main menu page (Testing) | Update the test plan with integration test relating to allowing registered students to access the table containing tutors of tutorflix| 15 min  |   6.10.2023 | B    |
 |22| Test accessing a specific tutor from the user list feature. (Testing) | Update the test plan with an integration test relating to the feature that checks a specific tutor account from the tutor list  |  15 min |  8.10.2023  |  B   |
-|23| | | | | |
-|24| | | | | |
-|25| | | | | |
-|26| | | | | |
-|27| | | | | |
+|23| Add the tutor list feature and the filtering options for it (Developing)|Have a tutor list feature that can be filtered by country or name of the tutor | 40 min|30.10.2023 | C|
+|24| Add the view-specific tutor or student account option (Developing)| Be able to see a specific account by clicking a hyperlink attached to the account's name in the list of accounts|35 min |2.11.2023 | C|
+|25| Create a flow diagram for the registration system (Design)| Have a visual presentation of the registration algorithm that was used for the web application|20 min |3.11.2023 |B |
+|26| Create a flow diagram for the user account viewing feature (Design)| Have a visual presentation of the algorithm that was used for the account viewing feature of the web application|25 min |3.11.2023 |B |
+|27| Create a flow diagram for the tutor list filtering feature (Design)| Have a visual presentation of the algorithm that was used for the tutor list filtering feature of the web application|30 min |3.11.2023 |B |
 |28 | Run code review testing for potential loops and loop nesting and see if any complex algorithms used need a comment to explain them to potential co-developers (Testing) | Have a more efficient code of higher quality and better coding practices that would make future co-development easier  | 25 min   | 1.11.2023|  B   |
 
 # Criteria C: Development
