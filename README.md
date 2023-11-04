@@ -110,7 +110,7 @@ Fig.8 shows a Flow diagram that visually represents the filtering feature for th
 |4|Finding a specific user through filter options in the user table|Integration testing|Find a user through username search or by choosing a specific city of interest |(1)Run Project_4.py(2)Login using adequate credentials for the tester account created int test no.1. (3)Choose the "see all users" option from the navigation bar. (4) Choose a city and see if only users from that city appear in the user table. (5) Now type a certain username or a part of it and see if only adequate users appear | Both filter functions work and are properly integrated with the user table database and main menu|
 |5|Code practices around HTML and Python, regarding usage of loops and their nesting  |Code Review| Replace repeating functions and features using better coding practices by using loops, and make the code more efficient by nesting loops.|(1) Review Project_4.py python code and HTML code to see any repetitive parts. (2) Create an algorithm that would replace the repetitive part using loops and nesting them if necessary. (3) Replace the old repetitive code and connect new algorithm and HTML code to the main SNS code | The code now uses loops for the profile accessing and for the learn about city feature.| 
 |6| Commenting on complex code practices |Code Review| Adding comments that would explain the usage of more complex programming tools and algorithms to help future potential developers| (1) Review the python Project_4.py code and focus on the more complex algorithms and routes that have unique features (2) Add a comment explaining their usage and function in the code| The code is easier to understand and is more open for future co-development|
-
+Fig.9 shows the test plan containing tests performed on the Tutorflix web application.
 
 ## Record of Tasks
 | Task No | Planned Action                                              | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
@@ -143,7 +143,7 @@ Fig.8 shows a Flow diagram that visually represents the filtering feature for th
 |26| Create a flow diagram for the user account viewing feature (Design)| Have a visual presentation of the algorithm that was used for the account viewing feature of the web application|25 min |3.11.2023 |B |
 |27| Create a flow diagram for the tutor list filtering feature (Design)| Have a visual presentation of the algorithm that was used for the tutor list filtering feature of the web application|30 min |3.11.2023 |B |
 |28 | Run code review testing for potential loops and loop nesting and see if any complex algorithms used need a comment to explain them to potential co-developers (Testing) | Have a more efficient code of higher quality and better coding practices that would make future co-development easier  | 25 min   | 1.11.2023|  B   |
-
+Fig.10 shows the record of tasks throughout the development of the Tutorflix web application.
 # Criteria C: Development
 ## Tools and techniques used
 1. Manipulating SQLite Database
@@ -176,16 +176,16 @@ pwd_config = CryptContext(schemes = ["pbkdf2_sha256"],
                           pbkdf2_sha256__default_rounds = 30000
                           )
 ```
-Fig.12 Shows the encryption function used for securing users' data
+Fig.11 Shows the encryption function used for securing users' data
 
-Fig. 12 shows the process and encryption method used for password hashing for the Tutorflix website. To prevent any serious harm in the case of data leaking, if the same password is used in multiple places, an intruder can use that and the email for other web services, hurting the user in the process.
+Fig. 11 shows the process and encryption method used for password hashing for the Tutorflix website. To prevent any serious harm in the case of data leaking, if the same password is used in multiple places, an intruder can use that and the email for other web services, hurting the user in the process.
 ```.py
 # This function receives an unsafe password and returns the hashed password
 def encrypt_password(user_passowrd):
     return pwd_config.encrypt(user_passowrd)
 
 ```
-Fig. 13 shows the method which calls the previously mentioned process of encryption.
+Fig. 12 shows the method which calls the previously mentioned process of encryption.
 In order to fulfill the client's request for the website, safe and secure data storing is necessary and it allows privacy of the user to stay at a desired level.
 
 ### Regsitration System
@@ -211,10 +211,10 @@ def register():
     return render_template('register.html')
 
 ```
-Fig. 14 shows the registration function for the social network website Citio. 
+Fig. 13 shows the registration function for the social network website Citio. 
 
-in Fig.14 
-When developing the registration system shown in Fig.14 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country and the account type (student/tutor) which would later be used in the filtering options. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction I used sqlite3.connect instead of the databse_wroker method I used in other cases in order to not have to modify that method jsut because of this specific case.
+in Fig.13 
+When developing the registration system shown in Fig.13 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country and the account type (student/tutor) which would later be used in the filtering options. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction I used sqlite3.connect instead of the databse_wroker method I used in other cases in order to not have to modify that method jsut because of this specific case.
 
 ### Login System
 ```.py
@@ -242,9 +242,9 @@ def login():
     return render_template("login.html", message = msg)
 
 ```
-Fig.15 shows the Login system feature of the website
+Fig.14 shows the Login system feature of the website
 
-Fig. 15 we see the login function of the Tutorflix web application. After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. If it does, login is successful and a user is given a session token that lasts 30 minutes after which they would need to login again. 
+Fig. 14 we see the login function of the Tutorflix web application. After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. If it does, login is successful and a user is given a session token that lasts 30 minutes after which they would need to login again. 
 
 ```.py
 def token_required(f):
@@ -273,13 +273,78 @@ def token_required(f):
     # Return the decorated function
     return decorated
 ```
-Fig.16 shows the JWT session token feature of the Tutorflix Web application.
+Fig.15 shows the JWT session token feature of the Tutorflix Web application.
 
-Fig.16 shows the function used for the creation of the session tokens. This important implementation was inspired by using computational thinking and decomposing the problem of website safety. Even after implementing cookies, one could still redirect to a page without signing in beforehand. This is why I generalized the algorithm for creating JWT session tokens [^9] which in turn allowed me to set a requirement that a user is logged in before accessing any features of the website. This improved the security of the website and solved the previously decomposed problem of safety that the website had.
+Fig.15 shows the function used for the creation of the session tokens. This important implementation was inspired by using computational thinking and decomposing the problem of website safety. Even after implementing cookies, one could still redirect to a page without signing in beforehand. This is why I generalized the algorithm for creating JWT session tokens [^9] which in turn allowed me to set a requirement that a user is logged in before accessing any features of the website. This improved the security of the website and solved the previously decomposed problem of safety that the website had.
 
 In order to successfully develop this I needed to have the following things in my algorithm: The wraps function from functools module is used to preserve the original function's metadata (data containing information about certain data, in this case about the function). After that the decorated function checks if a token is present in the user's session. If a token is present, the function attempts to decode it using the 'jwt.decode' function. If the token is invalid, the user is redirected to the login page. If the token is valid, the decorated function is called with the original arguments and keyword arguments using the 'f' function. For this, args is used to pass a variable number of non-keyword arguments to the decorated function and kwargs is used to pass a variable number of keyword arguments to the decorated function. 
 
 ## Success Criteria 2: The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range.
+```.py
+country = request.args.get('country')# Gets the country chosen from the option bar (if any)
+        search_query = request.args.get('search_query')
+        # Filters the list of all_users to only include those that contain the search query (case insensitive)
+        # if a search query is provided through the search bar filter
+        if search_query:
+            all_users = [user for user in all_users if search_query.lower() in user[1].lower()]
+        return render_template("user.html", users = all_users, country = country)
+```
+Fig.16 shows the filter options for the tutors using country filtering and name search filtering.
+
+```.py
+    min_price = request.args.get('min_price')
+        max_price = request.args.get('max_price')
+        subject = request.args.get('subject')
+        content_keywords = request.args.get('content_keywords')
+
+        # Construct the SQL query based on the provided parameters
+        query = "SELECT * FROM posts WHERE 1=1"  # Start with a true condition to append filters
+
+        if min_price:
+            query += f" AND price >= {min_price}"
+        if max_price:
+            query += f" AND price <= {max_price}"
+        if subject:
+            query += f" AND subject = '{subject}'"
+        if content_keywords:
+            query += f" AND content LIKE '%{content_keywords}%'"
+
+        # Execute the query and fetch results as dictionaries
+        all_posts = db.search(query)
+        db.close()
+
+        # Now all_posts will contain dictionaries, and you can access their elements using keys
+        return render_template("posts.html", posts=all_posts, get_username=get_username)
+```
+Fig.17 shows the filter options for the posts using subject, price and key word filtering.
+
+## Success Criteria 3: The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
+
+```.py
+   if request.method == 'POST':
+            if request.method == 'POST':
+                title = request.form['title']
+                content = request.form['content']
+                price = request.form['price']
+                subject = request.form['subject']
+                now = datetime.now()
+                today = now.strftime("%d/%m/%Y")
+
+                if len(title) > 0 and len(content) > 0 and len(price) > 0 and len(subject) > 0 and str(
+                        user_id) == current_user_id:
+                    new_post = f"INSERT INTO posts (title, content, price, subject, user_id, datetime) VALUES ('{title}', '{content}', '{price}', '{subject}', '{user_id}', '{today}')"
+                    db.run_save(query = new_post)
+                    return redirect(url_for('profile', user_id = user_id))
+        users, posts = None, None
+        user = db.search(f"SELECT * from users where id={user_id}")
+        if user:
+            posts = db.search(f"select * from posts where user_id={user_id}")
+            user = user[0]  
+
+        return render_template("profile.html", user = user, posts = posts, current_user_id=int(current_user_id))
+```
+Fig. 18 shows the code developed in order to allow posting tutoring advertisements on the Tutorflix website. The algorithm I developed uses if statements to gather the post's title,content, subject, price, time of posting, and checks if the information is being provided by the user currently signed in. If that is the case a new post will be inserted and the page will be refreshed, now showing the newly posted article. I developed this algorithm using patern recognition from the login page where a similar type was used where after a certain validation a query was used which inserted data input into the database.
+
 
 
 # Criteria D: Functionality
