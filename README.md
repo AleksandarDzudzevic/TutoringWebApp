@@ -149,6 +149,122 @@ Fig.8 shows a Flow diagram that visually represents the filtering feature for th
 ## Sources
 ## Development
 
+## Success Criteria 1: The social network website will provide a  secure login and registration system. 
+### Password encryption
+```.py
+from passlib.context import CryptContext
+
+pwd_config = CryptContext(schemes = ["pbkdf2_sha256"],
+                          default = "pbkdf2_sha256",
+                          pbkdf2_sha256__default_rounds = 30000
+                          )
+```
+Fig.12 Shows the encryption function used for securing users' data
+
+Fig. 12 shows the process and encryption method used for password hashing for the Tutorflix website. To prevent any serious harm in the case of data leaking, if the same password is used in multiple places, an intruder can use that and the email for other web services, hurting the user in the process.
+```.py
+# This function receives an unsafe password and returns the hashed password
+def encrypt_password(user_passowrd):
+    return pwd_config.encrypt(user_passowrd)
+
+```
+Fig. 13 shows the method which calls the previously mentioned process of encryption.
+In order to fulfill the client's request for the website, safe and secure data storing is necessary and it allows privacy of the user to stay at a desired level.
+
+### Regsitration System
+```.py
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        country = request.form['country']
+        name = request.form['username']
+        type = request.form['account-type']
+        # Generate hashed password
+        hashed_password = encrypt_password(password)
+        # Insert user data into database
+        conn = sqlite3.connect('tutorflix.db')
+        c = conn.cursor()
+        c.execute("INSERT INTO users (email, password, country, name, type) VALUES (?, ?, ?, ? , ?)", (email, hashed_password, country,name,type))
+        conn.commit()
+        conn.close()
+        # Redirect user to login page
+        return redirect(url_for("login"))
+    return render_template('register.html')
+
+```
+Fig. 14 shows the registration function for the social network website Citio. 
+
+in Fig.14 
+When developing the registration system shown in Fig.14 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country which would later be used in the filtering options for tutors. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction I used sqlite3.connect instead of the databse_wroker method I used in other cases in order to not have to modify that method jsut because of this specific case.
+
+### Login System
+```.py
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    msg = ''
+    if request.method == 'POST':
+        email = request.form['email']
+        passwd = request.form['passwd']
+
+        db = database_worker("tutorflix.db")
+        user = db.search(f"SELECT id, email, password from users where email ='{email}'")
+        if user:
+            print("passed")
+            user = user[0]  # cause search returns a list
+            id, email_db, hashed = user
+            if check_password(hashed_password = hashed, user_password = passwd):
+                response = make_response(render_template('index.html'))
+                response.set_cookie('user.id', f"{id}")
+                token = jwt.encode({'user_id': id, 'exp': datetime.utcnow() + timedelta(minutes = 30)}, token_key,algorithm = 'HS256')
+                session['token'] = token
+                return response
+        else:
+            msg = "user does not exist"
+    return render_template("login.html", message = msg)
+
+```
+Fig.15 shows the Login system feature of the website
+
+Fig. 15 we see the login function of the Tutorflix web application. After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. If it does, login is successful and a user is given a session token that lasts 30 minutes after which they would need to login again. 
+
+```.py
+def token_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        # Check if a token is present in the user's session
+        if 'token' not in session:
+            print("no token")
+            # If no token is present, redirect the user to the login page
+            return redirect(url_for('login'))
+        try:
+            # Attempt to decode the token using the secret key
+            print("decoding the token")
+            print(session['token'])
+            data = jwt.decode(session['token'], token_key, algorithms = ['HS256'])
+            print(data)
+
+        except:
+            print("wrong token")
+            # If the token is invalid, redirect the user to the login page
+            return redirect(url_for('login'))
+
+        # If the token is valid, call the decorated function with the original arguments and keyword arguments
+        return f(*args, **kwargs)
+
+    # Return the decorated function
+    return decorated
+```
+Fig.16 shows the JWT session token feature of the Tutorflix Web application.
+
+Fig.16 shows the function used for the creation of the session tokens. This important implementation was inspired by using computational thinking and decomposing the problem of website safety. Even after implementing cookies, one could still redirect to a page without signing in beforehand. This is why I generalized the algorithm for creating JWT session tokens [^9] which in turn allowed me to set a requirement that a user is logged in before accessing any features of the website. This improved the security of the website and solved the previously decomposed problem of safety that the website had.
+
+In order to successfully develop this I needed to have the following things in my algorithm: The wraps function from functools module is used to preserve the original function's metadata (data containing information about certain data, in this case about the function). After that the decorated function checks if a token is present in the user's session. If a token is present, the function attempts to decode it using the 'jwt.decode' function. If the token is invalid, the user is redirected to the login page. If the token is valid, the decorated function is called with the original arguments and keyword arguments using the 'f' function. For this, args is used to pass a variable number of non-keyword arguments to the decorated function and kwargs is used to pass a variable number of keyword arguments to the decorated function. 
+
+
+
+
 # Criteria D: Functionality
 ## Video showcase
 
@@ -175,3 +291,5 @@ Fig.8 shows a Flow diagram that visually represents the filtering feature for th
 [^6]: "What is SQL?" W3Schools, W3Schools, https://www.w3schools.com/sql/
 [^7]: https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/
 [^8]: 4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
+[^9]: 4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
+
