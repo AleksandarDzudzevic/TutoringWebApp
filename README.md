@@ -146,10 +146,27 @@ Fig.8 shows a Flow diagram that visually represents the filtering feature for th
 
 # Criteria C: Development
 ## Tools and techniques used
+1. Manipulating SQLite Database
+2. Variables
+3. For loops
+4. If statements
+5. Functions
+6. Password Hashing
+7. Nesting loops
+8. HTML template usage
+9. JWT session token usage
+10. Cookie usage
+11. CSS web design 
+12. Using Flask library in Python
 ## Sources
+1. “Beautiful CSS Buttons Examples - CSS Scan.” 92 Beautiful CSS Buttons Examples - CSS Scan, https://getcssscan.com/css-buttons-examples. 
+2. “Flask HTTP Methods, Handle GET &amp; Post Requests.” GeeksforGeeks, GeeksforGeeks, 2 Feb. 2023, https://www.geeksforgeeks.org/flask-http-methods-handle-get-post-requests/. 
+3. “Cirrus CSS.” Cirrus, https://www.cirrus-ui.com/buttons/basics. 
+4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
+5. “How to - Search Bar.” How To Create a Search Bar, https://www.w3schools.com/howto/howto_css_searchbar.asp. 
 ## Development
 
-## Success Criteria 1: The social network website will provide a  secure login and registration system. 
+## Success Criteria 1: The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform.
 ### Password encryption
 ```.py
 from passlib.context import CryptContext
@@ -197,7 +214,7 @@ def register():
 Fig. 14 shows the registration function for the social network website Citio. 
 
 in Fig.14 
-When developing the registration system shown in Fig.14 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country which would later be used in the filtering options for tutors. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction I used sqlite3.connect instead of the databse_wroker method I used in other cases in order to not have to modify that method jsut because of this specific case.
+When developing the registration system shown in Fig.14 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country and the account type (student/tutor) which would later be used in the filtering options. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction I used sqlite3.connect instead of the databse_wroker method I used in other cases in order to not have to modify that method jsut because of this specific case.
 
 ### Login System
 ```.py
@@ -262,7 +279,7 @@ Fig.16 shows the function used for the creation of the session tokens. This impo
 
 In order to successfully develop this I needed to have the following things in my algorithm: The wraps function from functools module is used to preserve the original function's metadata (data containing information about certain data, in this case about the function). After that the decorated function checks if a token is present in the user's session. If a token is present, the function attempts to decode it using the 'jwt.decode' function. If the token is invalid, the user is redirected to the login page. If the token is valid, the decorated function is called with the original arguments and keyword arguments using the 'f' function. For this, args is used to pass a variable number of non-keyword arguments to the decorated function and kwargs is used to pass a variable number of keyword arguments to the decorated function. 
 
-
+## Success Criteria 2: The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range.
 
 
 # Criteria D: Functionality
