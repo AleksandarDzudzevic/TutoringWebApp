@@ -71,15 +71,15 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 ## Success Criteria
 1) The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform.
 >[ I often struggled with not having a place to find the right tutor/I usually just got their phone number as a contact]
-2) The tutoring platform will contain useful filter options such as search by title, country, subject, and price range.
+2) The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, tutor name, and price range.
 >[I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged]
 3) The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 >[in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful]
 4) The tutoring platform will have a grading system for tutors and list tutors by highest average grade so that the best-performing ones gain the most exposure.
 >[ which usually turned out to be better at selling their services than actually teaching]
-5) The tutoring platform will allow students to see all posts by a specific tutor.
+5) The tutoring platform will allow students to see all posts by a specific tutor or reviews made by a specific student.
 >[was unsuccessful as the students that tried to find him couldn't due to many other tutors teaching the same subject.]
-6) The web application will have options to communicate with users through email for features such as sending the forgotten password, or information about application updates.
+6) The web application will have options to communicate with users through email for features such as retrieving the forgotten password.
 > This app aims to constantly interact with users establishing a relationship filled with trust, which isn't the case with current platforms which often seem sketchy.
 # Criteria B: Design
 ## System Diagram
