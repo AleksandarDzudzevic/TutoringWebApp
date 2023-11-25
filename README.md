@@ -78,6 +78,9 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 >[was unsuccessful as the students that tried to find him couldn't due to many other tutors teaching the same subject.]
 6) The web application will have options to communicate with users through email for features such as retrieving the forgotten password.
 > This app aims to constantly interact with users establishing a relationship filled with trust, which isn't the case with current platforms which often seem sketchy.
+
+Criteria A was established with the help of the data gathered through a questionnaire. (referred to in the [appendix](#appendix))
+
 # Criteria B: Design
 ## System Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/IA%20System%20DiagramVersionLast.png)
@@ -99,7 +102,6 @@ Fig.7 shows a Flow diagram that visually represents the feature of viewing a spe
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/FC_3_User%20list%20feature%20flow%20diagram%20-%20Flowchart%20.png)
 Fig.8 shows a Flow diagram that visually represents the filtering feature for the tutor list of the Tutorflix web application.
 
-Criteria A was established with the help of the data gathered through a questionnaire. (referred to in the [appendix](#appendix))
 
 ## Test plan
 |Test Number|Description|Test Type| Target|Procedure|Expected Outcome|
