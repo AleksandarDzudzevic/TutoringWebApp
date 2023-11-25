@@ -145,7 +145,7 @@ Fig.9 shows the test plan containing tests performed on the Tutorflix web applic
 |26| Create a flow diagram for the user account viewing feature (Design)| Have a visual presentation of the algorithm that was used for the account viewing feature of the web application|25 min |3.11.2023 |B |
 |27| Create a flow diagram for the tutor list filtering feature (Design)| Have a visual presentation of the algorithm that was used for the tutor list filtering feature of the web application|30 min |3.11.2023 |B |
 |28| Run code review for potential loops and loop nesting and see if any complex algorithms used need a comment to help future co-developers (Testing)| More efficient code of higher quality and better coding practices that would make co-development easier  | 25 min  |3.11.2023|B|
-
+|29| Update descriptions of the diagrams and make the visual representation more understandable (Design)| Make the design of the diagrams easier to interpret| 20 min| 24.11.2023|B|
 
 Fig.10 shows the record of tasks throughout the development of the Tutorflix web application.
 # Criteria C: Development
