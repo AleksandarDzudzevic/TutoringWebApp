@@ -84,23 +84,23 @@ Criteria A was established with the help of the data gathered through a question
 # Criteria B: Design
 ## System Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/IA%20System%20DiagramVersionLast.png)
-Fig.2 shows the system diagram of the online tutoring platform which visually represents the interconnected components, modules, and their interactions, providing a comprehensive overview of the application's architecture and helping in understanding the overall structure of the Tutorflix.
+Fig.2 shows the system diagram of the online tutoring platform which visually represents the interconnected components, modules, and their interactions, providing a comprehensive overview of the application's architecture and helping in understanding the overall structure of Tutorflix.
 ## Wireframe Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/Wireframe%20IA.png)
-Fig.3 Shows the wireframe diagram of the web application for the Tutorflix platform. All of the main pages are connected through the navigation bar (indicated as "NAVIGATION BAR"), which was part of the base template used for the Citio website, and within that indicated with red color are the features available to both account types (students and tutors). A token is required to move around the website, and it can only be recieved when a user pass login successfully, which is why that is the starting location when accsing the web application. 
+Fig.3 Shows the wireframe diagram of the web application for the Tutorflix platform. All of the main pages are connected through the navigation bar (indicated as "NAVIGATION BAR"), which was part of the base template used for the Citio website, and within that indicated with red color are the features available to both account types (students and tutors). A token is required to move around the website, and it can only be received when a user passes login successfully, which is why that is the starting location when accessing the web application. 
 ## ER Diagram 
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/ER%20DIAGRAM_IA_1.png)
 Fig.4 Shows the ER diagram of the online tutoring platform, which represents the database structure of the web application and its interconnectivity and relationships between users, posts, and review classes. 
 ## UML Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/UML_IA.png)
-Fig.5 shows the class used for manipulating the database, used for the website application during process of sending and reciving query requests, allowing communication between databases and features of the web application.
+Fig.5 shows the class used for manipulating the database, used for the website application during the process of sending and receiving query requests, allowing communication between databases and features of the web application.
 ## Flow Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/FC_1_User%20list%20flow%20diagram%20-%20Flowchart.png)
-Fig.6 shows a Flow diagram that visually represents the registration process for the Tutorflix web application
+Fig.6 shows a Flow diagram that visually represents the registration process for the Tutorflix web application, showcasing the required information from the users, which is gathered through the represented input boxes and is then queried and stored in the user database once the registration has been successful.
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/FC_2-fthe%20profile%20feature%20-%20Flowchart.png)
-Fig.7 shows a Flow diagram that visually represents the feature of viewing a specific profile
+Fig.7 shows a Flow diagram that visually represents the feature of viewing a specific profile and showcases the process of presenting a specific profile with all its posts through queries that get such information from the Posts database allowing the representation of the desired profile only if the user has a valid and active token (if they are logged in). In case one is viewing their own profile they have the option to upload a new post of their own.
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/User%20list%20feature%20flow%20diagram%20-%20Flowchart%20(1).png)
-Fig.8 shows a Flow diagram that visually represents the filtering feature for the tutor list of the Tutorflix web application.
+Fig.8 shows a Flow diagram that visually represents the filtering feature for the tutor list of the Tutorflix web application, which allows users to efficiently use Tutorflix in order to find tutors that match their needs, either location-wise, financially, subject-wise, or all of the mentioned by using iterations to checks all the registered users that fit such criterium.
 
 
 ## Test plan
