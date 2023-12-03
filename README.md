@@ -48,7 +48,7 @@ Fig.1 shows the picture created for TutorFlix using Dream AI[^1] generated on th
 
 
 ## Problem Definition
-As a student, I often struggled with not having a place to find the right tutor. Just like many, I ended up going with the tutors recommended by friends or relatives, which usually turned out to be better at selling their services than actually teaching and that bothered me. I also struggled with finding ones that lived close to me. I got contacted by my client, a teacher, who saw a similar issue and explained that in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful as the students who wanted to find him couldn't due to many other tutors teaching the same subject. To change this, my client requested a tutoring platform where students can find tutors that are well-ranked not well-advertised, live close to them, and are within their price range so that tutoring services can finally be level that they are supposed to. Furthermore, this app aims to constantly interact with users establishing a relationship filled with trust, which isn't the case with current platforms which often seem sketchy. 
+As a student, I often struggled with not having a place to find the right tutor. Just like many, I ended up going with the tutors recommended by friends or relatives, which usually turned out to be better at selling their services than actually teaching and that bothered me. I also struggled with finding ones that lived close to me. I got contacted by my client, a teacher, who saw a similar issue and explained that in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful as the students who wanted to find him couldn't due to many other tutors teaching the same subject. To change this, my client requested a tutoring platform where students can find tutors that are well-ranked not well-advertised, live close to them, and are within their price range so that tutoring services can finally be level that they are supposed to. 
 
 ## Rationale for Proposed Solution
 To revolutionize tutoring services and allow the best-ranked tutors to get the most exposure, instead of the ones with the best advertising, I have decided to develop a web application for my client that will serve as an inclusive platform that will connect highly ranked tutors and students seeking their help, allowing the most optimal learning experience.
@@ -70,14 +70,14 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 >[ I often struggled with not having a place to find the right tutor/I usually just got their phone number as a contact]
 2) The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range.
 >[I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged]
-3) The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
+3) The tutoring platform will allow tutor accounts to upload multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 >[in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful]
-4) The tutoring platform will have a grading system for tutors and list tutors by highest average grade so that the best-performing ones gain the most exposure.
->[ which usually turned out to be better at selling their services than actually teaching]
+4) The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor.
+> Students who wanted to find him couldn't due to many other tutors teaching the same subject.
 5) The tutoring platform will allow students to see all posts by a specific tutor or reviews made by a specific student.
 >[was unsuccessful as the students that tried to find him couldn't due to many other tutors teaching the same subject.]
-6) The web application will have options to communicate with users through email for features such as retrieving the forgotten password.
-> This app aims to constantly interact with users establishing a relationship filled with trust, which isn't the case with current platforms which often seem sketchy.
+6) The tutoring platform will have leaderboards for tutors with the most reviews and best grades, and be constantly updated to ensure that good and reliable tutors gain the most exposure.
+>[ (Tutors) usually turned out to be better at selling their services than actually teaching]
 
 Criteria A was established with the help of the data gathered through a questionnaire. (referred to in the [appendix](#appendix))
 
