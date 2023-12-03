@@ -89,7 +89,7 @@ Fig.2 shows the system diagram of the online tutoring platform which visually re
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/Wireframe%20IA.png)
 Fig.3 Shows the wireframe diagram of the web application for the Tutorflix platform. All of the main pages are connected through the navigation bar (indicated as "NAVIGATION BAR"), which was part of the base template used for the Citio website, and within that indicated with red color are the features available to both account types (students and tutors). A token is required to move around the website, and it can only be received when a user passes login successfully, which is why that is the starting location when accessing the web application. 
 ## ER Diagram 
-![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/ER%20DIAGRAM_IA_1.png)
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/ER%20DIAGRAM_IA_Final.png)
 Fig.4 Shows the ER diagram of the online tutoring platform, which represents the database structure of the web application and its interconnectivity and relationships between users, posts, and review classes. 
 ## UML Diagram
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/UML_IA.png)
