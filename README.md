@@ -70,7 +70,7 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 >[ I often struggled with not having a place to find the right tutor/I usually just got their phone number as a contact]
 2) The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range.
 >[I also struggled with finding ones that lived close to me, and as I usually just got their phone number as a contact, I wasn't aware of who they were and how much they charged]
-3) The tutoring platform will allow tutor accounts to upload multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
+3) The tutoring platform will allow tutor accounts to upload  and delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 >[in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful]
 4) The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades.
 > Students who wanted to find him couldn't due to many other tutors teaching the same subject/ (Tutors) usually turned out to be better at selling their services than actually teaching
@@ -543,18 +543,21 @@ Fig.27 shows the method used for redirecting the user to the Gmail drafting emai
 ## Video showcase
 
 ## Extensibility
-The future additions to Tutorflix would include 1) Adding a Google Meet plugin option for even more convenient communication between Tutors and Students. 2) Another extension would be handling payment processing between tutors and students which is a complex task but would ultimately ensure the quality and trust of services performed through Tutorfilx. 3) Lastly I also aim to implement more complex verification of accounts through legal documents and other personal information which asks for improved security measures compared to what Tutorflix currently has.
+The extensibility of Tutorflix focused on being as future Dev-friendly as possible to ensure that the development of the application is not slowed down because of difficulties in the interpretation of the existing code by new developers. This was achieved in the following ways:
+1) Explanation comments included throughout the code and every algorithm that includes database references or any complex algorithms so that future developers do not need to struggle to decipher the computational thinking behind the development process.
+2) Using methods that can be used for web pages for every user profile or using a generalized structure for each post to not require a specific web page design for each user and a separate setup for every post.  
+3) Using functions such as database_worker, encryption, and similar (appended as my_lib.py) to be able to reuse the mentioned functions throughout the application and not have to rewrite it on every occasion when its use is necessary.
 
 # Criteria E: Evaluation
 ## Evaluation table
 |Criteria number| Criteria| Final product| Criteria success|
 |---------------|----------|-------------------------------|--------------|
-|1|The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform. | | |
-|2|The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range. | | |
-|3|The tutoring platform will allow tutor accounts to upload multiple tutoring posts for different subjects and topics that they offer to teach, all on one account. | | |
-|4|The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades. | | |
-|5|The tutoring platform will allow students to see all posts by a specific tutor. | | |
-|6|The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting. | | |
+|1|The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform. |As seen in Fig.11~15 I have successfully solved this criterion by providing my client with a secured registration and login system which uses sha256 encryption, Additionally I also added Jwt tokens to disable users accessing pages before they are provided with a token upon successfully registering to use Tutorflix. | Succeeded |
+|2|The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range. |As seen in Fig.16~17 I have successfully solved this criterion by providing my client with multiple filtering options requested by the client, both for posts and for users. Using decomposition I separately constructed these filtering features so that users can filter things using a singular filter. This way users are now able to efficiently use Tutorflix to find relevant posts and tutors. | Succeeded|
+|3|The tutoring platform will allow tutor accounts to upload and delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account. |As seen in Fig.18~20 I have successfully solved this criterion by providing my client with a platform where tutors can both delete and post posts with different prices, descriptions, and subjects which can all be later filtered and found through filtering search. This can all be done on a singular account which was tested during the tests shown in the test plan section. | Succeeded |
+|4|The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades. |As seen in Fig.21~24 I have successfully solved this criterion by providing my client with a grading feature for posts that weren't previously graded by registered users and then also presented a leaderboard feature that uses grades given to different posts and ranks users based on the average grades received on their posts, giving my client a platform that succeeds in this criteria| Succeeded|
+|5|The tutoring platform will allow students to see all posts by a specific tutor. | As seen in Fig.25 I have successfully solved this criterion by providing my client with a view profile feature that used pattern recognition to use a generalized template for every profile and efficiently show specific posts made by the owner of the account that is being viewed. | Succeeded|
+|6|The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting. |As seen in Fig.26~27 I have successfully solved this criterion by providing my client with an easy to use solution by redirecting them to a email drafting process in Gmail to the desired tutor in order to make the Tutorflix experience more convenient| Succeeded|
 
 ## Recommendation
  After consulting my client the future additions to Tutorflix to improve the user experience and simplify the tutoring process would include:
