@@ -155,15 +155,15 @@ Fig.9 shows the test plan containing tests performed on the Tutorflix web applic
 |35| Make the Planning script more concise (Planning)| Make the Planning text shorter and more understandable  | 10 min | 8.12.2023 | A |
 |36| Update a flow chart and include newly added iteration to one of the presented algorithms (Design) | Update the flow chart so that it matches a relevant algorithm  | 10 min |  8.12.2023| B |
 |37| Create a feature for  contacting a desired tutor via Gmail through Tutorflix (Developing) | Have a button that redirects tutors to Gmail with the included tutor email provided by Tutorflix | 20 min | 8.12.2023 | C |
-|38| |  |  |  |  |
-|39| |  |  |  |  |
-|40| |  |  |  |  |
-|41| |  |  |  |  |
-|42| |  |  |  |  |
+|38| Update Development process explanation (Developing) | Write the development explanation  referring to techniques of computational thinking| 60 min  | 9.12.2023 | C |
+|39| Perform the Video Showcase (Functionality)| Have a visual presentation of the Tutorflix Web application and all its features | 20 min  | 9.12.2023 | D |
+|40| Add an evaluation table (Evaluating)| Have a table representing overall success in meeting client's criteria  | 30 min | 9.2.2023 | E |
+|41| Add Client feedback given in the form of future improvements and recommended additions to the Web application (Evaluating) | Present possible future additions to the web application | 10 min | 9.12.2024 | E |
+|42| Present Program's Extensibility (Functionality)| Present extensibility of Tutorflix in terms of how easy it would be for future developers to work on it (comments, use of pattern recognition and functions, etc.) |15 min  | 9.12.2023 | D |
 
 
 
-Fig.10 shows the record of tasks throughout the development of the Tutorflix web application divided into Planning, Designing, Developing, Testing, and Evaluating tasks.
+Fig.10 shows the record of tasks throughout the development of the Tutorflix web application divided into Planning, Designing, Developing, Testing, Functionality, and Evaluating tasks.
 
 # Criteria C: Development
 ## Tools and techniques used
