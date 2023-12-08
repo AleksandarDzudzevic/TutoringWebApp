@@ -153,8 +153,8 @@ Fig.9 shows the test plan containing tests performed on the Tutorflix web applic
 |33| Develop an algorithm that integrates ratings of posts into the leaderboard system (Developing)|Be able to constantly see the most relevant tutor rankings using the grading algorithm  |10 min  | 6.12.2023 | C |
 |34| Improve the existing Navigation bar menu so that it can be withdrawn by clicking for the second time (Developing)| Make the Navigation bar more functional | 15 min | 6.12.2023 | C |
 |35| Make the Planning script more concise (Planning)| Make the Planning text shorter and more understandable  | 10 min | 8.12.2023 | A |
-|36| |  |  |  |  |
-|37| |  |  |  |  |
+|36| Update a flow chart and include newly added iteration to one of the presented algorithms (Design) | Update the flow chart so that it matches a relevant algorithm  | 10 min |  8.12.2023| B |
+|37| Create a feature for  contacting a desired tutor via Gmail through Tutorflix (Developing) | Have a button that redirects tutors to Gmail with the included tutor email provided by Tutorflix | 20 min | 8.12.2023 | C |
 |38| |  |  |  |  |
 |39| |  |  |  |  |
 |40| |  |  |  |  |
@@ -179,6 +179,9 @@ Fig.10 shows the record of tasks throughout the development of the Tutorflix web
 10. Cookie usage
 11. CSS web design 
 12. Using Flask library in Python
+13. Using JavaScript
+14. Using BootStrap
+  
 ## Sources
 1. “Beautiful CSS Buttons Examples - CSS Scan.” 92 Beautiful CSS Buttons Examples - CSS Scan, https://getcssscan.com/css-buttons-examples. 
 2. “Flask HTTP Methods, Handle GET &amp; Post Requests.” GeeksforGeeks, GeeksforGeeks, 2 Feb. 2023, https://www.geeksforgeeks.org/flask-http-methods-handle-get-post-requests/. 
