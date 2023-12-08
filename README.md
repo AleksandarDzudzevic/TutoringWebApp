@@ -576,8 +576,8 @@ The extensibility of Tutorflix focused on being as future Dev-friendly as possib
 [^7]: https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/
 [^8]: 4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
 [^9]: 4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
-![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png)
 
 ### The first client consultation was done remotely on July 10th, 2023 13:15 pm, during which success criteria were established.
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png)
 
 
