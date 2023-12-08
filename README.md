@@ -134,12 +134,12 @@ Fig.9 shows the test plan containing tests performed on the Tutorflix web applic
 |14|Connect login/registration to the database (Developing)|Established connection now add/checks newly registered/ already existing accounts to/with the data database|20 min| 23.8.2023|C|
 |15| Redo Login and Register UI to match the general template used for the web application (Developing)| Make the registration system UI fit better into the web app style. | 20 min| 1.9.2023 | C|
 |16| Add password policy and create an interactive response to the user's input for the password. (Developing) |Make a password policy and add an emoji reaction showing if the user followed the policy. | 25 min|16.9.2023 | C|
-|17| Add JWT token in order to improve web app security and only allow feature access to logged-in users (Developing)| Only registered users can access the application features| 30 min | 21.9.2023| C|
+|17| Add JWT token to improve web app security and only allow feature access to logged-in users (Developing)| Only registered users can access the application features| 30 min | 21.9.2023| C|
 |18| Create the UML diagram for the web application (Design) |Create the UML diagram for the class used for manipulating databases for the web application | 20 min|26.9.2023 | B|
 |19| Update the wireframe diagram so that it shows the new design of the web application (Design)|Have the wireframe diagram show an accurate version of the web application|20 min |28.9.2023 | B |
 |20|  Perform 2 unit tests explained in the test plan section (Testing)  | Perform tests of the registration system and the tutor list feature  |  15 min | 6.10.2023  |  B   |
-|21| Test accessing the tutors list from the main menu page (Testing) | Update the test plan with integration test relating to allowing registered students to access the table containing tutors of tutorflix| 15 min  |   6.10.2023 | B    |
-|22| Test accessing a specific tutor from the user list feature. (Testing) | Update the test plan with an integration test relating to the feature that checks a specific tutor account from the tutor list  |  15 min |  8.10.2023  |  B   |
+|21| Test accessing the tutors list from the main menu page (Testing) | Update the test plan with integration test relating to allowing registered students to access the table containing tutors of tutorflix| 15 min  |   6.10.2023 | B|
+|22| Test accessing a specific tutor from the user list feature. (Testing) | Update the test plan with an integration test relating to the feature that checks a specific tutor account from the tutor list  |  15 min |  8.10.2023  |  B|
 |23| Add the tutor list feature and the filtering options for it (Developing)|Have a tutor list feature that can be filtered by country or name of the tutor | 40 min|30.10.2023 | C|
 |24| Add the view-specific tutor or student account option (Developing)| Be able to see a specific account by clicking a hyperlink attached to the account's name in the list of accounts|35 min |2.11.2023 | C|
 |25| Create a flow diagram for the registration system (Design)| Have a visual presentation of the registration algorithm that was used for the web application|20 min |3.11.2023 |B |
@@ -147,8 +147,24 @@ Fig.9 shows the test plan containing tests performed on the Tutorflix web applic
 |27| Create a flow diagram for the tutor list filtering feature (Design)| Have a visual presentation of the algorithm that was used for the tutor list filtering feature of the web application|30 min |3.11.2023 |B |
 |28| Run code review for potential loops and loop nesting and see if any complex algorithms used need a comment to help future co-developers (Testing)| More efficient code of higher quality and better coding practices that would make co-development easier  | 25 min  |3.11.2023|B|
 |29| Update descriptions of the diagrams and make the visual representation more understandable (Design)| Make the design of the diagrams easier to interpret| 20 min| 24.11.2023|B|
+|30| Develop an algorithm for creating a leaderboard and UI for this feature (Developing)| Make a functioning leaderboard feature |40 min |1.12.2023  | C |
+|31| Develop an algorithm for deleting a post and UI for this feature (Developing) |Have a functioning delete post method|15 min| 2.12.2023| C|
+|32| Develop an algorithm for grading posts and create restraints of not being able to grade the same post twice and UI for this feature (Developing)| Have a proper grading system| 30 min|2.12.2023  | C  |
+|33| Develop an algorithm that integrates ratings of posts into the leaderboard system (Developing)|Be able to constantly see the most relevant tutor rankings using the grading algorithm  |10 min  | 6.12.2023 | C |
+|34| Improve the existing Navigation bar menu so that it can be withdrawn by clicking for the second time (Developing)| Make the Navigation bar more functional | 15 min | 6.12.2023 | C |
+|35| Make the Planning script more concise (Planning)| Make the Planning text shorter and more understandable  | 10 min | 8.12.2023 | A |
+|36| |  |  |  |  |
+|37| |  |  |  |  |
+|38| |  |  |  |  |
+|39| |  |  |  |  |
+|40| |  |  |  |  |
+|41| |  |  |  |  |
+|42| |  |  |  |  |
 
-Fig.10 shows the record of tasks throughout the development of the Tutorflix web application.
+
+
+Fig.10 shows the record of tasks throughout the development of the Tutorflix web application divided into Planning, Designing, Developing, Testing, and Evaluating tasks.
+
 # Criteria C: Development
 ## Tools and techniques used
 1. Manipulating SQLite Database
