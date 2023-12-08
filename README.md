@@ -74,7 +74,7 @@ To store the vast amounts of data needed for an online tutoring platform, a reli
 >[in the past he tried using online selling platforms such as eBay or Craigslist to post his advertisement for tutoring services, but was unsuccessful]
 4) The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades.
 > Students who wanted to find him couldn't due to many other tutors teaching the same subject/ (Tutors) usually turned out to be better at selling their services than actually teaching
-5) The tutoring platform will allow students to see all posts by a specific tutor or reviews made by a specific student.
+5) The tutoring platform will allow students to see all posts by a specific tutor.
 >[was unsuccessful as the students that tried to find him couldn't due to many other tutors teaching the same subject.]
 6) The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting.
 
@@ -301,7 +301,7 @@ Fig.15 shows the JWT session token feature of the Tutorflix Web application.
 
 Fig.15 shows the function used for the creation of the session tokens. This important implementation was inspired by using computational thinking and decomposing the problem of website safety. Even after implementing cookies, one could still redirect to a page without signing in beforehand. This is why I generalized the algorithm for creating JWT session tokens [^9] which in turn allowed me to set a requirement that a user is logged in before accessing any features of the website. This improved the security of the website and solved the previously decomposed problem of safety that the website had.
 
-In order to successfully develop this I needed to have the following things in my algorithm: The wraps function from functools module is used to preserve the original function's metadata (data containing information about certain data, in this case about the function). After that the decorated function checks if a token is present in the user's session. If a token is present, the function attempts to decode it using the 'jwt.decode' function. If the token is invalid, the user is redirected to the login page. If the token is valid, the decorated function is called with the original arguments and keyword arguments using the 'f' function. For this, args is used to pass a variable number of non-keyword arguments to the decorated function and kwargs is used to pass a variable number of keyword arguments to the decorated function. 
+To successfully develop this I needed to have the following things in my algorithm: The wraps function from functools module is used to preserve the original function's metadata (data containing information about certain data, in this case about the function). After that the decorated function checks if a token is present in the user's session. If a token is present, the function attempts to decode it using the 'jwt.decode' function. If the token is invalid, the user is redirected to the login page. If the token is valid, the decorated function is called with the original arguments and keyword arguments using the 'f' function. For this, args is used to pass a variable number of non-keyword arguments to the decorated function and kwargs is used to pass a variable number of keyword arguments to the decorated function. 
 
 ## Success Criteria 2: The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range.
 ```.py
@@ -369,7 +369,11 @@ Fig.17 shows the filter options for the posts using subject, price and key word 
 ```
 Fig. 18 shows the code developed in order to allow posting tutoring advertisements on the Tutorflix website. The algorithm I developed uses if statements to gather the post's title,content, subject, price, time of posting, and checks if the information is being provided by the user currently signed in. If that is the case a new post will be inserted and the page will be refreshed, now showing the newly posted article. I developed this algorithm using patern recognition from the login page where a similar type was used where after a certain validation a query was used which inserted data input into the database.
 
+## Success Criteria 4: The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades.
 
+## Success Criteria 5: The tutoring platform will allow students to see all posts by a specific tutor.
+
+## Success Criteria 6: The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting.
 
 # Criteria D: Functionality
 ## Video showcase
