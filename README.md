@@ -542,14 +542,28 @@ Fig.27 shows the method used for redirecting the user to the Gmail drafting emai
 # Criteria D: Functionality
 ## Video showcase
 
+## Extensibility
+The future additions to Tutorflix would include 1) Adding a Google Meet plugin option for even more convenient communication between Tutors and Students. 2) Another extension would be handling payment processing between tutors and students which is a complex task but would ultimately ensure the quality and trust of services performed through Tutorfilx. 3) Lastly I also aim to implement more complex verification of accounts through legal documents and other personal information which asks for improved security measures compared to what Tutorflix currently has.
+
 # Criteria E: Evaluation
 ## Evaluation table
 |Criteria number| Criteria| Final product| Criteria success|
 |---------------|----------|-------------------------------|--------------|
-
-## Client interview
+|1|The tutoring platform will have a secure register system, unique for student and tutor accounts with access to different features on the platform. | | |
+|2|The tutoring platform will contain useful filter options such as search by tutor name and country and for posts subject, word search, and price range. | | |
+|3|The tutoring platform will allow tutor accounts to upload multiple tutoring posts for different subjects and topics that they offer to teach, all on one account. | | |
+|4|The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades. | | |
+|5|The tutoring platform will allow students to see all posts by a specific tutor. | | |
+|6|The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting. | | |
 
 ## Recommendation
+ After consulting my client the future additions to Tutorflix to improve the user experience and simplify the tutoring process would include:
+1) Adding a Google Meet plugin option for even more convenient communication between Tutors and Students. 
+2) Handling payment processing between tutors and students which is a complex task but would ultimately ensure the quality and trust of services performed through Tutorfilx.
+3) Making a verification process regarding who can rate what posts based on the tutoring they experienced, which would be done through a proof checking of a Google meeting or similar.
+4) Adding a feature to follow a specific tutor and see his tutoring posts above others, allowing tutors well suited to you, to emerge from the crowd.
+5) Add a password recovery through email to allow users to keep their accounts in case of forget their credentials.
+6) Lastly, implementing more complex verification of accounts through legal documents and other personal information which asks for improved security measures compared to what Tutorflix currently has.
 
 
 # Appendix
