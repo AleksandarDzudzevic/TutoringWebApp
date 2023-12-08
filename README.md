@@ -567,9 +567,6 @@ The extensibility of Tutorflix focused on being as future Dev-friendly as possib
 5) Add a password recovery through email to allow users to keep their accounts in case of forget their credentials.
 6) Lastly, implementing more complex verification of accounts through legal documents and other personal information which asks for improved security measures compared to what Tutorflix currently has.
 # Appendix
-![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png)
-
-### The first client consultation was done remotely on July 10th, 2023 13:15 pm, during which success criteria were established.
 [^1]: Dream AI prompt: "Art representing Tutoring services, presenting a tutor and a student". 6 July 2023 https://dream.ai/create
 [^2]: Sengar, Ritesh. “Python vs PHP: Which Is Better for Web Development?” Hackernoon, 7 Jan. 2021, hackernoon.com/python-vs-php-which-is-better-for-web-development-cj1236mj. 
 [^3]: "Welcome to Flask." Flask Documentation, 15 Jan. 2023, flask.palletsprojects.com/en/2.1.x/. 
@@ -579,4 +576,8 @@ The extensibility of Tutorflix focused on being as future Dev-friendly as possib
 [^7]: https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/
 [^8]: 4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
 [^9]: 4. Auth0. “JSON Web Tokens.” Auth0 Docs, https://auth0.com/docs/secure/tokens/json-web-tokens. 
+![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png)
+
+### The first client consultation was done remotely on July 10th, 2023 13:15 pm, during which success criteria were established.
+
 
