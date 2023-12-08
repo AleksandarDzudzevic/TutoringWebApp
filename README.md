@@ -200,9 +200,8 @@ pwd_config = CryptContext(schemes = ["pbkdf2_sha256"],
                           pbkdf2_sha256__default_rounds = 30000
                           )
 ```
-Fig.11 Shows the encryption function used for securing users' data
-
-Fig. 11 shows the process and encryption method used for password hashing for the Tutorflix website. To prevent any serious harm in the case of data leaking, if the same password is used in multiple places, an intruder can use that and the email for other web services, hurting the user in the process.
+Fig.11 Shows the encryption function used for password hashing for the Tutorflix website.
+To prevent any serious harm in the case of data leaking, if the same password is used in multiple places, an intruder can use that and the email for other web services, hurting the user in the process.
 ```.py
 # This function receives an unsafe password and returns the hashed password
 def encrypt_password(user_passowrd):
@@ -210,7 +209,8 @@ def encrypt_password(user_passowrd):
 
 ```
 Fig. 12 shows the method which calls the previously mentioned process of encryption.
-In order to fulfill the client's request for the website, safe and secure data storing is necessary and it allows privacy of the user to stay at a desired level.
+
+To fulfill the client's request for the website, safe and secure data storage is necessary and it allows privacy of the user to stay at a desired level.
 
 ### Regsitration System
 ```.py
@@ -235,10 +235,9 @@ def register():
     return render_template('register.html')
 
 ```
-Fig. 13 shows the registration function for the social network website Citio. 
+Fig. 13 shows the registration function for the social network website Tutorflix. 
 
-in Fig.13 
-When developing the registration system shown in Fig.13 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country and the account type (student/tutor) which would later be used in the filtering options. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction I used sqlite3.connect instead of the databse_wroker method I used in other cases in order to not have to modify that method jsut because of this specific case.
+When developing the registration system shown in Fig.13 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country and the account type (student/tutor) which would later be used in the filtering options. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Then I implemented abstraction when I used sqlite3.connect instead of the databse_wroker method I used in other cases to not have to modify that method just because of this specific case.
 
 ### Login System
 ```.py
@@ -268,7 +267,7 @@ def login():
 ```
 Fig.14 shows the Login system feature of the website
 
-Fig. 14 we see the login function of the Tutorflix web application. After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. If it does, login is successful and a user is given a session token that lasts 30 minutes after which they would need to login again. 
+After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. If it does, login is successful and a user is given a session token that lasts 30 minutes after which they would need to login again. 
 
 ```.py
 def token_required(f):
@@ -315,6 +314,8 @@ country = request.args.get('country')# Gets the country chosen from the option b
 ```
 Fig.16 shows the filter options for the tutors using country filtering and name search filtering.
 
+Here I developed an algorithm that used SQL queries to filter tutors by their country and name of their account. The method is used every time there is a new filtering request to ensure seeing only relevant tutors every time.
+
 ```.py
     min_price = request.args.get('min_price')
         max_price = request.args.get('max_price')
@@ -340,7 +341,9 @@ Fig.16 shows the filter options for the tutors using country filtering and name 
         # Now all_posts will contain dictionaries, and you can access their elements using keys
         return render_template("posts.html", posts=all_posts, get_username=get_username)
 ```
-Fig.17 shows the filter options for the posts using subject, price and key word filtering.
+Fig.17 shows the filter options for the posts using subject, price, and keyword filtering.
+
+I used decomposition to divide all different filtering features and develop each of them separately using shown If statements. This way they can be modified and posts can be filtered using them independently. The idea itself was developed by implementing pattern recognition of previous filtering requests used for tutors.
 
 ## Success Criteria 3: The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 
@@ -367,14 +370,175 @@ Fig.17 shows the filter options for the posts using subject, price and key word 
 
         return render_template("profile.html", user = user, posts = posts, current_user_id=int(current_user_id))
 ```
-Fig. 18 shows the code developed in order to allow posting tutoring advertisements on the Tutorflix website. The algorithm I developed uses if statements to gather the post's title,content, subject, price, time of posting, and checks if the information is being provided by the user currently signed in. If that is the case a new post will be inserted and the page will be refreshed, now showing the newly posted article. I developed this algorithm using patern recognition from the login page where a similar type was used where after a certain validation a query was used which inserted data input into the database.
+Fig. 18 shows the algorithm developed to allow posting tutoring advertisements on the Tutorflix website. The algorithm I developed uses if statements to gather the post's title, content, subject, price, and time of posting, and checks if the information is being provided by the user currently signed in. If that is the case a new post will be inserted and the page will be refreshed, now showing the newly posted article. I developed this algorithm using pattern recognition from the login page where a similar type was used where after a certain validation a query was used which inserted data input into the database.
+
+
+```.py
+
+def delete_post(post_id):
+    current_user_id = int(request.cookies.get('user.id'))
+
+    # Check if the user owns the post before deleting
+    db = database_worker("tutorflix.db")
+    post_owner_id = db.search(f"SELECT user_id FROM posts WHERE id={post_id}")
+    db.close()
+
+    if post_owner_id and post_owner_id[0][0] == current_user_id:
+        # User owns the post, proceed with deletion
+        db = database_worker("tutorflix.db")
+        query = f"DELETE FROM posts WHERE id={post_id}"
+        db.run_save(query)
+        db.close()
+        flash('Post deleted successfully!', 'success')
+    else:
+        flash('You do not have permission to delete this post.', 'error')
+
+    # Redirect to the user's profile page
+    return redirect(url_for('profile', user_id=current_user_id))
+```
+Fig.19 shows the delete post method that uses flash notifications via JavaScript to ensure post-removing
+```.js
+<script>
+    function confirmDelete(postId) {
+        if (confirm("Are you sure you want to delete this post?")) {
+            // If user confirms, submit the form to delete the post
+            document.querySelector(`form[action='/delete_post/${postId}']`).submit();
+        }
+    }
+</script>
+```
+Fig.20 Shows the JavaScript code used to present confirmation about deleting a post
+
+To construct the Delete Post algorithm I used decomposition and divided the problem into subsets such as first assuring that the person owns the post they want to delete and then adding a confirmation message Via JavaScript as a flash in Python (Fig.19) which was through pattern recognition as I used the similar script and way of showing a notification I used for grading posts.
 
 ## Success Criteria 4: The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades.
+```.py
+def rate_post(post_id):
+    current_user_id = int(request.cookies.get('user.id'))
+    given_grade = int(request.form['rating'])
+
+    # Ensure the user has not graded the post before
+    if not has_graded(post_id, current_user_id):
+        # Insert the rating into the reviews table
+        db = database_worker("tutorflix.db")
+        query = f"INSERT INTO reviews (given_grade, user_id, post_id) VALUES ({given_grade}, {current_user_id}, {post_id})"
+        db.run_save(query)
+        db.close()
+        flash('Post rated successfully!', 'success')
+    else:
+        flash('You have already rated this post or you cannot rate your own post.', 'error')
+
+    # Redirect to the same page with the same filters
+    return redirect(url_for('posts', min_price=request.args.get('min_price'),
+                                    max_price=request.args.get('max_price'),
+                                    subject=request.args.get('subject'),
+                                    content_keywords=request.args.get('content_keywords')))
+```
+Fig.21 Shows the Algorithm used for rating posts which follows no multiple grading from the same user policy.
+I used abstraction here to first focus on checking if the user already reviewed the selected post he attempted to grade, and then focused on external things such as flash error message and filtering.
+
+```.py
+def has_graded(post_id, user_id):
+    db = database_worker("tutorflix.db")
+    result = db.search(f"SELECT id FROM reviews WHERE post_id={post_id} AND user_id={user_id}")
+    db.close()
+    return bool(result)
+
+```
+Fig.22 Shows the graded method which uses abstraction to use the simplest filtration using an SQL query and only focuses on returning already graded posts by the registered user.
+```.py
+//  JavaScript to show and hide the error message
+        document.addEventListener('DOMContentLoaded', function () {
+            var errorMessage = document.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'block'; // Show the error message
+                setTimeout(function () {
+                    errorMessage.style.display = 'none'; // Hide the error message after 1500 milliseconds (1.5 seconds)
+                }, 1500);
+            }
+        });
+```
+Fig.23 Shows the JS Script used to show the error message when a user tries to rate the same post twice and then removes the error after 1,5 seconds.
+I used pattern recognition of computational thinking modified previously used Script for flash messages, and modified the display time and color.
+```.py
+def leaderboard():
+    # Fetch the average grades for all tutors from the reviews table
+    db = database_worker("tutorflix.db")
+    query = """
+        SELECT p.user_id, AVG(r.given_grade) as avg_grade
+        FROM reviews r
+        JOIN posts p ON r.post_id = p.id
+        GROUP BY p.user_id
+        ORDER BY avg_grade DESC
+        LIMIT 3
+    """
+    top_tutors = db.search(query)
+    db.close()
+
+    # Define medal emojis
+    medals = ['🥇', '🥈', '🥉']
+    # Render the leaderboard template with the top tutors and medals
+    return render_template("leaderboard.html", top_tutors=top_tutors, medals=medals, get_username=get_username)
+```
+Fig.24 Shows the method used for the creation of a leaderboard of the best tutors decided by the highest average grades, using SQL queries.
+
+This algorithm creation asked for decomposition where I first needed average grades and then queried the request to only show me the three highest ones which would be in descending order and presented as the current leaderboard members.
 
 ## Success Criteria 5: The tutoring platform will allow students to see all posts by a specific tutor.
+```.py
+ if not request.cookies.get('user.id'):
+        return redirect(url_for('login'))
+
+  users, posts = None, None
+        user = db.search(f"SELECT * from users where id={user_id}")
+        if user:
+            posts = db.search(f"select * from posts where user_id={user_id}")
+            user = user[0]  # Search returns a list (there should be no users whose credentials overlap)
+
+        return render_template("profile.html", user = user, posts = posts, current_user_id=int(current_user_id))
+```
+Fig.25 shows an algorithm that allows a presentation of a specific profile and its posts.
+
+In this algorithm development, I focused on finding first the selected user and then only the posts he created through abstraction. This ensured I could see only posts created by a certain tutor on the account page owned by the same.
+This was later used through pattern recognition when a person accessed a specific profile through a profile list or tutor leaderboard.
 
 ## Success Criteria 6: The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting.
+```.py
+def get_professor_email(user_id):
+    db = database_worker("tutorflix.db")
+    user = db.search(f"SELECT email FROM users WHERE id = {user_id}")
+    db.close()
 
+    if user:
+        return user[0][0]  # Assuming email is the first (and only) column in the query result
+    else:
+        return None  # Return None if the user with the specified ID is not found
+```
+Fig.26 Shows an algorithm that extracts the email address of a desired professor.
+
+```.py
+@app.route('/email_professor/<int:user_id>')
+@token_required
+def email_professor(user_id):
+    # Retrieve professor's email based on user_id (you need to modify this based on your database structure)
+    professor_email = get_professor_email(user_id)
+
+    # Check if the professor's email is available
+    if professor_email:
+        # Construct the Gmail compose link
+        gmail_link = f"https://mail.google.com/mail/?view=cm&to={professor_email}"
+
+        # Redirect the user to the Gmail compose link
+        return redirect(gmail_link)
+    else:
+        # If the professor's email is not available, you can handle it accordingly (redirect, show an error message, etc.)
+        return redirect(url_for('users'))
+
+```
+Fig.27 shows the method used for redirecting the user to the Gmail drafting email section along with the previously extracted email address from a desired to allow tutoring class negotiation and similar.
+
+ To successfully meet this criterion I had to use a rational approach of abstraction to first focus on getting the email (Fig.26) and then proceed from there with redirecting the user via the email_professor method implemented in the buttons on the tutoring account pages. This allowed the interconnectivity between Gmail and Tutorflix to make the process of setting up the tutoring session more convenient.
+ 
 # Criteria D: Functionality
 ## Video showcase
 
