@@ -558,7 +558,6 @@ The extensibility of Tutorflix focused on being as future Dev-friendly as possib
 |4|The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades. |As seen in Fig.21~24 I have successfully solved this criterion by providing my client with a grading feature for posts that weren't previously graded by registered users and then also presented a leaderboard feature that uses grades given to different posts and ranks users based on the average grades received on their posts, giving my client a platform that succeeds in this criteria| Succeeded|
 |5|The tutoring platform will allow students to see all posts by a specific tutor. | As seen in Fig.25 I have successfully solved this criterion by providing my client with a view profile feature that used pattern recognition to use a generalized template for every profile and efficiently show specific posts made by the owner of the account that is being viewed. | Succeeded|
 |6|The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting. |As seen in Fig.26~27 I have successfully solved this criterion by providing my client with an easy to use solution by redirecting them to a email drafting process in Gmail to the desired tutor in order to make the Tutorflix experience more convenient| Succeeded|
-
 ## Recommendation
  After consulting my client the future additions to Tutorflix to improve the user experience and simplify the tutoring process would include:
 1) Adding a Google Meet plugin option for even more convenient communication between Tutors and Students. 
@@ -567,13 +566,10 @@ The extensibility of Tutorflix focused on being as future Dev-friendly as possib
 4) Adding a feature to follow a specific tutor and see his tutoring posts above others, allowing tutors well suited to you, to emerge from the crowd.
 5) Add a password recovery through email to allow users to keep their accounts in case of forget their credentials.
 6) Lastly, implementing more complex verification of accounts through legal documents and other personal information which asks for improved security measures compared to what Tutorflix currently has.
-
-
 # Appendix
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/client_interview_1st.png)
 
 ### The first client consultation was done remotely on July 10th, 2023 13:15 pm, during which success criteria were established.
-
 [^1]: Dream AI prompt: "Art representing Tutoring services, presenting a tutor and a student". 6 July 2023 https://dream.ai/create
 [^2]: Sengar, Ritesh. “Python vs PHP: Which Is Better for Web Development?” Hackernoon, 7 Jan. 2021, hackernoon.com/python-vs-php-which-is-better-for-web-development-cj1236mj. 
 [^3]: "Welcome to Flask." Flask Documentation, 15 Jan. 2023, flask.palletsprojects.com/en/2.1.x/. 
