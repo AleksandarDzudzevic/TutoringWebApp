@@ -541,7 +541,7 @@ Fig.27 shows the method used for redirecting the user to the Gmail drafting emai
  
 # Criteria D: Functionality
 ## Video showcase
-
+Video will be appended in the submitted folder.
 ## Extensibility
 The extensibility of Tutorflix focused on being as future Dev-friendly as possible to ensure that the development of the application is not slowed down because of difficulties in the interpretation of the existing code by new developers. This was achieved in the following ways:
 1) Explanation comments included throughout the code and every algorithm that includes database references or any complex algorithms so that future developers do not need to struggle to decipher the computational thinking behind the development process.
