@@ -168,7 +168,7 @@ Fig.10 shows the record of tasks throughout the development of the Tutorflix web
 # Criteria C: Development
 ## Tools and techniques used
 1. Manipulating SQLite Database
-2. Variables
+2. Using Abstract data types
 3. For loops
 4. If statements
 5. Functions
@@ -179,8 +179,7 @@ Fig.10 shows the record of tasks throughout the development of the Tutorflix web
 10. Cookie usage
 11. CSS web design 
 12. Using Flask library in Python
-13. Using JavaScript
-14. Using BootStrap
+
   
 ## Sources
 1. “Beautiful CSS Buttons Examples - CSS Scan.” 92 Beautiful CSS Buttons Examples - CSS Scan, https://getcssscan.com/css-buttons-examples. 
@@ -541,7 +540,7 @@ Fig.27 shows the method used for redirecting the user to the Gmail drafting emai
  
 # Criteria D: Functionality
 ## Video showcase
-Video will be appended in the submitted folder.
+The video will be appended in the submitted folder.
 ![](https://drive.google.com/file/d/1HH6s0r2b315yBg_2HZMimPXzY3wzqOsJ/view?usp=sharing)
 ## Extensibility
 The extensibility of Tutorflix focused on being as future Dev-friendly as possible to ensure that the development of the application is not slowed down because of difficulties in the interpretation of the existing code by new developers. This was achieved in the following ways:
@@ -558,7 +557,7 @@ The extensibility of Tutorflix focused on being as future Dev-friendly as possib
 |3|The tutoring platform will allow tutor accounts to upload and delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account. |As seen in Fig.18~20 I have successfully solved this criterion by providing my client with a platform where tutors can both delete and post posts with different prices, descriptions, and subjects which can all be later filtered and found through filtering search. This can all be done on a singular account which was tested during the tests shown in the test plan section. | Succeeded |
 |4|The tutoring platform will have a grading system for tutors where students can rate their experience with the tutor and leaderboards to show tutors with the best average grades. |As seen in Fig.21~24 I have successfully solved this criterion by providing my client with a grading feature for posts that weren't previously graded by registered users and then also presented a leaderboard feature that uses grades given to different posts and ranks users based on the average grades received on their posts, giving my client a platform that succeeds in this criteria| Succeeded|
 |5|The tutoring platform will allow students to see all posts by a specific tutor. | As seen in Fig.25 I have successfully solved this criterion by providing my client with a view profile feature that used pattern recognition to use a generalized template for every profile and efficiently show specific posts made by the owner of the account that is being viewed. | Succeeded|
-|6|The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting. |As seen in Fig.26~27 I have successfully solved this criterion by providing my client with an easy to use solution by redirecting them to a email drafting process in Gmail to the desired tutor in order to make the Tutorflix experience more convenient| Succeeded|
+|6|The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting. |As seen in Fig.26~27 I have successfully solved this criterion by providing my client with an easy to use solution by redirecting them to an email drafting process in Gmail to the desired tutor in order to make the Tutorflix experience more convenient| Succeeded|
 ## Recommendation
  After consulting my client the future additions to Tutorflix to improve the user experience and simplify the tutoring process would include:
 1) Adding a Google Meet plugin option for even more convenient communication between Tutors and Students. 
