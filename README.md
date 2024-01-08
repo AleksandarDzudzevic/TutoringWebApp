@@ -205,11 +205,10 @@ To prevent any serious harm in the case of data leaking, if the same password is
 # This function receives an unsafe password and returns the hashed password
 def encrypt_password(user_passowrd):
     return pwd_config.encrypt(user_passowrd)
-
 ```
 Fig. 12 shows the method which calls the previously mentioned process of encryption.
 
-To fulfill the client's request for the website, safe and secure data storage is necessary and it allows privacy of the user to stay at a desired level.
+After researching best practices for secure password storage, I discovered the CryptContext class with the specified configuration (Fig. 11) and implemented it in the encryption process (Fig. 12) to fulfill the client's request for Tutorflix, as safe and secure data storage is necessary to allow desired data security level.
 
 ### Regsitration System
 ```.py
@@ -322,7 +321,7 @@ Here I developed an algorithm that used SQL queries to filter tutors by their co
         content_keywords = request.args.get('content_keywords')
 
         # Construct the SQL query based on the provided parameters
-        query = "SELECT * FROM posts WHERE 1=1"  # Start with a true condition to append filters
+        query = "SELECT * FROM posts"  
 
         if min_price:
             query += f" AND price >= {min_price}"
@@ -342,7 +341,7 @@ Here I developed an algorithm that used SQL queries to filter tutors by their co
 ```
 Fig.17 shows the filter options for the posts using subject, price, and keyword filtering.
 
-I used decomposition to divide all different filtering features and develop each of them separately using shown If statements. This way they can be modified and posts can be filtered using them independently. The idea itself was developed by implementing pattern recognition of previous filtering requests used for tutors.
+I used decomposition to divide all different filtering features and develop each of them separately using shown If statements and stacking the query requests until their execution. This way they can be modified and posts can be filtered using them independently. Implementing the technique used in content_keywords if statement using LIKE feature for this particular query allowed me to search for a particular keyword or character to help with the usability of the filters. The idea itself was developed by implementing pattern recognition of previous filtering requests used for tutors.
 
 ## Success Criteria 3: The tutoring platform will allow tutor accounts to upload/delete multiple tutoring posts for different subjects and topics that they offer to teach, all on one account.
 
