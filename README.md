@@ -265,8 +265,7 @@ def login():
 ```
 Fig.14 shows the Login system feature of the website
 
-After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. If it does, login is successful and a user is given a session token that lasts 30 minutes after which they would need to login again. 
-
+After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. The main part of the algorithm development for this is the if statement which I set to check if the hashed versions of the password stored and password inputted match and if true renders the starting page while also starting the jwt session token that expires after 30 min from the exact time user registered. 
 ```.py
 def token_required(f):
     @wraps(f)
