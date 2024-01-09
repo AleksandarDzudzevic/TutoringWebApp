@@ -208,7 +208,7 @@ def encrypt_password(user_passowrd):
 ```
 Fig. 12 shows the method which calls the previously mentioned process of encryption.
 
-After researching best practices for secure password storage, I discovered the CryptContext class with the specified configuration (Fig. 11) and implemented it in the encryption process (Fig. 12) to fulfill the client's request for Tutorflix, as safe and secure data storage is necessary to allow desired data security level.
+After researching best practices for secure password storage and encryption, I discovered the CryptContext class with the specified configuration (Fig. 11) and implemented it in the encryption process (Fig. 12) to fulfill the client's request for Tutorflix, as safe and secure data storage is necessary to allow desired data security level.
 
 ### Regsitration System
 ```.py
