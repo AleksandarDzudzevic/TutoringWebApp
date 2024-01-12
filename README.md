@@ -208,7 +208,7 @@ def encrypt_password(user_passowrd):
 ```
 Fig. 12 shows the method which calls the previously mentioned process of encryption.
 
-After researching best practices for secure password storage and encryption, I discovered the CryptContext class with the specified configuration (Fig. 11) and implemented it in the encryption process (Fig. 12) to fulfill the client's request for Tutorflix, as safe and secure data storage is necessary to allow desired data security level.
+After researching best practices for secure password storage and encryption, I discovered the CryptContext class with the specified configuration (Fig. 11) and implemented it in the encryption process (Fig. 12) to fulfill the client's security request for Tutorflix, as safe and secure data storage is necessary to allow desired data security level.
 
 ### Regsitration System
 ```.py
@@ -319,7 +319,6 @@ Here I developed an algorithm that used SQL queries to filter tutors by their co
         subject = request.args.get('subject')
         content_keywords = request.args.get('content_keywords')
 
-        # Construct the SQL query based on the provided parameters
         query = "SELECT * FROM posts"  
 
         if min_price:
@@ -335,7 +334,6 @@ Here I developed an algorithm that used SQL queries to filter tutors by their co
         all_posts = db.search(query)
         db.close()
 
-        # Now all_posts will contain dictionaries, and you can access their elements using keys
         return render_template("posts.html", posts=all_posts, get_username=get_username)
 ```
 Fig.17 shows the filter options for the posts using subject, price, and keyword filtering.
