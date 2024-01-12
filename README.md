@@ -200,6 +200,8 @@ pwd_config = CryptContext(schemes = ["pbkdf2_sha256"],
                           )
 ```
 Fig.11 Shows the encryption function used for password hashing for the Tutorflix website.
+
+
 To prevent any serious harm in the case of data leaking, if the same password is used in multiple places, an intruder can use that and the email for other web services, hurting the user in the process.
 ```.py
 # This function receives an unsafe password and returns the hashed password
@@ -207,6 +209,7 @@ def encrypt_password(user_passowrd):
     return pwd_config.encrypt(user_passowrd)
 ```
 Fig. 12 shows the method which calls the previously mentioned process of encryption.
+
 
 After researching best practices for secure password storage and encryption, I discovered the CryptContext class with the specified configuration (Fig. 11) and implemented it in the encryption process (Fig. 12) to fulfill the client's security request for Tutorflix, as safe and secure data storage is necessary to allow desired data security level.
 
@@ -234,6 +237,7 @@ def register():
 
 ```
 Fig. 13 shows the registration function for the social network website Tutorflix. 
+
 
 When developing the registration system shown in Fig.13 using generalization I was able to recognize a way to solve one of the criteria requirements by including an option bar in the registration where a user would input the country and the account type (student/tutor) which would later be used in the filtering options. This helped with solving the problem of seeing irrelevant content creators who are not located in the same country. Implementing abstraction when I used sqlite3.connect instead of the databse_wroker method I used in other cases as I needed a tailored way of manipulating this database issue.
 
@@ -264,6 +268,7 @@ def login():
 
 ```
 Fig.14 shows the Login system feature of the website
+
 
 After getting the credentials that a user inputted I developed an algorithm that searches through the user database, looking for an account with a matching email address. The policy for the email address is to have the symbol "@" and characters before and after it. If there is such a user, the algorithm would then check if the encryption of the password they inputted matches the one in the database that was stored upon registration of the account. The main part of the algorithm development for this is the if statement which I set to check if the hashed versions of the password stored and password inputted match and if true renders the starting page while also starting the jwt session token that expires after 30 min from the exact time user registered as I used datetime.now() feature. 
 ```.py
