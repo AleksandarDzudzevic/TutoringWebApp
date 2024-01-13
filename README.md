@@ -499,45 +499,52 @@ This algorithm creation asked for decomposition where I first needed average gra
 ```
 Fig.25 shows an algorithm that allows a presentation of a specific profile and its posts.
 
-In this algorithm development, I focused on finding first the selected user and then only the posts he created through abstraction. This ensured I could see only posts created by a certain tutor on the account page owned by the same.
-This was later used through pattern recognition when a person accessed a specific profile through a profile list or tutor leaderboard.
+In this algorithm development, I focused on finding first the selected user and then only the posts he created through abstraction. This was later used through pattern recognition when a person accessed a specific profile through a profile list or tutor leaderboard to allow the same feature.
 
 ## Success Criteria 6: The tutoring platform will offer a way to reach out to a desired tutor by accessing their profile and choosing the email option which would allow them to send the email to a tutor and schedule a meeting.
 ```.py
-def get_professor_email(user_id):
+def get_professor_email(user_id, professor_id):
     db = database_worker("tutorflix.db")
-    user = db.search(f"SELECT email FROM users WHERE id = {user_id}")
+    user, professor = db.search(f"SELECT email FROM users WHERE id = {user_id}"), db.search(
+        f"SELECT email FROM users WHERE id = {professor_id}")
     db.close()
 
-    if user:
-        return user[0][0]  # Assuming email is the first (and only) column in the query result
+    if (user and professor):
+        return (user[0][0], professor[0][0])  # Assuming email is the first (and only) column in the query result
     else:
         return None  # Return None if the user with the specified ID is not found
 ```
-Fig.26 Shows an algorithm that extracts the email address of a desired professor.
+Fig.26 Shows an algorithm that extracts the email address of a desired professor and the user who wants to send the email to them.
 
 ```.py
-@app.route('/email_professor/<int:user_id>')
+@app.route('/email_professor/<int:user_id>/<int:professor_id>', methods = ['GET', 'POST'])
 @token_required
-def email_professor(user_id):
-    # Retrieve professor's email based on user_id (you need to modify this based on your database structure)
-    professor_email = get_professor_email(user_id)
-
-    # Check if the professor's email is available
-    if professor_email:
-        # Construct the Gmail compose link
-        gmail_link = f"https://mail.google.com/mail/?view=cm&to={professor_email}"
-
-        # Redirect the user to the Gmail compose link
-        return redirect(gmail_link)
+def email_professor(user_id, professor_id):
+    if request.method == 'POST' and 'email_professor' in request.form:
+        print("Received email_professor POST request")
+        user_email, professor_email = get_professor_email(user_id, professor_id)
+        if professor_email and user_email:
+            msg = Message(f"Hey you have a new request for a class from :{user_email}",
+                          sender = "tutorflix.webapp@gmail.com", recipients = [f'{professor_email}'])
+            msg.body = f"Hello, this email was sent through the web application so do not reply to it but reach out to the user interested at {professor_email}"
+            try:
+                print(msg)
+                mail.send(msg)
+                print("Email sent successfully")
+                return 'Sent email'
+            except Exception as e:
+                print(f"Error sending email: {str(e)}")
+                return redirect('index.html')
+        else:
+            print("Professor email not found")
+            return 'Professor email not found'
     else:
-        # If the professor's email is not available, you can handle it accordingly (redirect, show an error message, etc.)
-        return redirect(url_for('users'))
-
+        print("Invalid request")
+        return 'Invalid request'
 ```
-Fig.27 shows the method used for redirecting the user to the Gmail drafting email section along with the previously extracted email address from a desired to allow tutoring class negotiation and similar.
+Fig.27 shows the algorithm used for allowing users to send an email through the Tutorflix web application to the desired tutor, showing interest in their posting and establishing the connection.
 
- To successfully meet this criterion I had to use a rational approach of abstraction to first focus on getting the email (Fig.26) and then proceed from there with redirecting the user via the email_professor method implemented in the buttons on the tutoring account pages. This allowed the interconnectivity between Gmail and Tutorflix to make the process of setting up the tutoring session more convenient.
+ To successfully meet this criterion I had to use a rational approach of abstraction to first focus on getting the email (Fig.26) and then proceed from there by allowing the user and tutor to connect via the email_professor method implemented in the buttons on the tutoring account pages. This allowed the interconnectivity between Gmail and Tutorflix to make the process of setting up the tutoring session more convenient.
  
 # Criteria D: Functionality
 ## Video showcase
