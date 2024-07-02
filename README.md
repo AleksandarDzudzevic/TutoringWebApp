@@ -1,4 +1,4 @@
-# CS_IA_Aleks TutorFlix web application
+# TutorFlix web application
 ![](https://github.com/AleksandarDzudzevic/CS_IA_Aleks/blob/main/Screenshot%202023-09-02%20at%2014.18.57.png)
 Fig.1 shows the picture created for TutorFlix using Dream AI[^1] generated on the prompt "Art representing Tutoring services, presenting a tutor and a student".
 
