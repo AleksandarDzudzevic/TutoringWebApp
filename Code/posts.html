@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorflix - Posts</title>
+    <style>
+        /* Shared styles for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Additional styles specific to profile presentation */
+        .post-container {
+            border: 2px solid #ec42ff; /* Updated border thickness and color */
+            margin: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .post-user {
+            font-weight: bold;
+            color: #ec42ff; /* Violet color */
+        }
+
+        .post-date {
+            color: #666;
+        }
+
+        .card-body {
+            padding: 0; /* Remove default padding to make borders more evident */
+        }
+
+        .card-body h3,
+        .card-body p {
+            margin: 0; /* Remove margin to fit content within the box */
+        }
+
+        .post-price {
+            font-weight: bold;
+            color: #007bff; /* Bootstrap primary color */
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            color: #d17bff; /* Bootstrap primary color */
+        }
+
+        .post-like:hover,
+        .post-comment:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ec42ff; /* Violet color */
+            font-style: italic;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #ec42ff; /* Violet color */
+            accent-color: #801aef;
+            text-align: center; /* Center the h1 element */
+            line-height: 50px; /* Set the height of the h1 element */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            display: none; /* Initially hide the error message */
+        }
+    </style>
+    <script>
+        //  JavaScript to show and hide the error message
+        document.addEventListener('DOMContentLoaded', function () {
+            var errorMessage = document.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'block'; // Show the error message
+                setTimeout(function () {
+                    errorMessage.style.display = 'none'; // Hide the error message after 1500 milliseconds (1.5 seconds)
+                }, 1500);
+            }
+        });
+    </script>
+</head>
+<body>
+<form style="margin: 20px;">
+</form>
+
+<h1>All Posts</h1>
+<div class="container mt-4" style="background-color: #ffffff; padding: 20px; border-radius: 15px;">
+    {% with error_message = get_flashed_messages(category_filter='error') %}
+        {% if error_message %}
+            <p class="error-message">{{ error_message[0] }}</p>
+        {% endif %}
+    {% endwith %}
+<form method="GET" action="{{ url_for('posts') }}" class="mt-4">
+    <div class="row">
+        <div class="col-md-3 mb-2">
+            <label for="min_price" class="form-label">Minimum Price:</label>
+            <input type="number" class="form-control" name="min_price" id="min_price" min="0">
+        </div>
+
+        <div class="col-md-3 mb-2">
+            <label for="max_price" class="form-label">Maximum Price:</label>
+            <input type="number" class="form-control" name="max_price" id="max_price" min="0">
+        </div>
+
+        <div class="col-md-3 mb-2">
+            <label for="subject" class="form-label">Subject:</label>
+            <select class="form-select" name="subject" id="subject">
+                <option value="">Select subject</option>
+                <option value="Math">Math</option>
+                <option value="English">English</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Computer Science">Computer Science</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 mb-2">
+            <label for="content_keywords" class="form-label">Content Keywords:</label>
+            <input type="text" class="form-control" name="content_keywords" id="content_keywords">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Apply Filters</button>
+</form>
+    {% if posts | length > 0 %}
+        {% for post in posts %}
+            <div class="post-container">
+                <div class="post-header">
+                    <span class="post-user">{{ get_username(post[6]) }}</span>
+                    <span class="post-date">{{ post[3] }}</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{ post[1].title() }}</h3>
+                    <p class="card-text post-content">{{ post[2] }}</p>
+                    <p class="card-text post-price">${{ post[4] }}</p>
+                </div>
+                <div class="card-footer post-rating"
+                     style="background-color: #ffffff; padding: 20px; border-radius: 15px;">
+                    <form method="POST" action="{{ url_for('rate_post', post_id=post[0]) }}">
+                        <label for="rating">Rate:</label>
+                        <select class="form-control" id="rating" name="rating" required>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        {% if post[6] == current_user_id %}
+                            <button type="button" class="btn btn-secondary" disabled>
+                                You can't rate your own post
+                            </button>
+                        {% else %}
+                            <button type="submit" class="btn btn-primary">Submit Rating</button>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No posts available.</p>
+    {% endif %}
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,93 @@
+/* Transitions */
+.transition,
+form button,
+form .question label,
+form .question input[type="text"],
+form select {
+  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+/* Fonts and General Styles */
+* {
+  font-family: 'Arial', sans-serif; /* Change to your preferred font */
+  font-weight: normal; /* Change font weight as needed */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background and Container Styles */
+html {
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  color: #be89ff;
+}
+
+form {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  max-height: 1000px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  background-color: #f2baff;
+  border-radius: 50px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Headline Styles */
+form h2 {
+  font-size: 38px;
+  color: #d17bff;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  margin: 0 auto 35px;
+  text-transform: uppercase;
+}
+
+/* Input Field Styles */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #888;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+  background-color: #d17bff;
+  color: #fff;
+}
+
+/* Button Styles */
+form input[type="submit"] {
+  margin-top: 35px;
+  background-color: #d17bff;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #9c3cff;
+}

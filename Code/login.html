@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to TutorFlix</title>
+</head>
+
+<link rel="stylesheet" href="/static/my_style.css">
+<body>
+ <form method="post">
+     <h2>Login to TutorFlix</h2>
+     <div>
+         <label for="">Email</label>
+         <input type="email" name="email">
+     </div>
+     <div class="form__field">
+         <label for="">Password</label>
+         <input type="password" name="passwd" class="form__input" pattern=".{6,}" required>
+         <span class="icon"></span>
+     </div>
+     <div>
+         <input type="submit" name="" value="Log In">
+     </div>
+     <div>
+         <p style="color: #d17bff; font-size: 18px;">Don't have an account yet?</p>
+         <ol style="list-style-type: none; margin: 0; padding: 0;">
+             <li><a href="{{ url_for('register') }}">Create an Account</a></li>
+         </ol>
+     </div>
+ </form>
+</body>
+</html>

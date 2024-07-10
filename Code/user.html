@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Added the Bootstrap CSS and Emoji CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>All Users</h1>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <form method="GET">
+                    <label for="country" class="form-label">🌍 Country</label>
+                    <div class="mb-3">
+                        <select class="form-select" id="country" name="country">
+                            <option>Select country</option>
+                            {# Loop through country_full_names dictionary to generate options #}
+                            {% for code, name in country_full_names.items() %}
+                                <option value="{{ code }}">{{ name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">🔍 Filter</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <form method="GET">
+                    <div class="mb-3">
+                        <label for="search_query" class="form-label">🔎 Search by username:</label>
+                        <input type="text" class="form-control" id="search_query" name="search_query">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <form method="GET">
+                    <button type="submit" class="btn btn-secondary mt-2">🔄 Reset Filters</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            {% for user in users %}
+                {% if not country or user[4] == country %}
+                    {% if not search or search.lower() in user[1].lower() %}
+                        <div class="col">
+                            <div class="card bg-light" style="width: 100%;">
+                                <div class="card-header">{{ user[1] }}</div>
+                                <div class="card-body">
+                                    <p class="card-text"><strong>Country:</strong> {{ country_full_names[user[4]] }}</p>
+                                    <p class="card-text"><strong>Email:</strong> {{ user[2] }}</p>
+                                    <a href="{{ url_for('profile', user_id=user[0]) }}" class="btn btn-pink rounded-pill">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Add the Bootstrap JS and Popper.js scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+{% endblock %}

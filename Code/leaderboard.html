@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="mb-4 text-center">🏆 Leaderboard 🏆</h1>
+            {% for tutor in top_tutors %}
+                <div class="mb-3 border rounded p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span style="font-size: 20px; font-weight: bold;">{{ get_username(tutor[0]) }}</span>
+                        <span class="fs-3">{{ medals[loop.index0] }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span style="font-size: 18px;">Average Grade: {{ tutor[1]|round(2) }}/5</span>
+                    </div>
+                    <!-- Visit Teacher Profile button -->
+                    <a href="{{ url_for('profile', user_id=tutor[0]) }}" class="btn btn-primary mt-2">Visit Teacher Profile</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

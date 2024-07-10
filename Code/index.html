@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/my_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZwT" crossorigin="anonymous">
+    <style>
+        /* Custom styles for the carousel */
+        .carousel-inner .carousel-item img {
+            max-width: 80%; /* Limit the image width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 15%; /* Make images circular */
+        }
+
+        /* Add margin between the carousel and header */
+        #carouselExampleFade {
+            margin-top: 20px;
+        }
+
+        /* Style for the options */
+        .options {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Display options vertically */
+            align-items: center; /* Center the options */
+            background-color: #f8f9fa; /* Bootstrap light gray background color */
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .options li {
+            padding: 10px;
+            transition: background-color 0.3s; /* Smooth transition for background color */
+            display: flex;
+            align-items: center;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: #495057; /* Bootstrap text color */
+            font-size: 18px; /* Increased font size */
+            margin-left: 10px; /* Add space between text and emoji */
+        }
+
+        .options a:hover {
+            color: #007bff; /* Bootstrap primary color on hover */
+        }
+
+        /* Highlight selected option */
+        .options .active {
+            background-color: #007bff; /* Bootstrap primary color */
+            border-radius: 5px;
+        }
+
+        .options .active a {
+            color: #ffffff; /* White text color for selected option */
+        }
+
+        /* Emoji styles */
+        .emoji {
+            font-size: 24px; /* Adjust size of emoji */
+            margin-right: 5px; /* Add space between emoji and text */
+        }
+
+        /* Custom style for feature block on hover */
+        .feature-block:hover {
+            background-color: #ffb6c1; /* Baby pink background color */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- Centered image container -->
+                    <div class="d-flex align-items-center justify-content-center position-relative">
+                        <img src="/static/Screenshot 2023-09-02 at 14.16.30.png" width="480" height="278" alt="Slide 1">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- Centered image container -->
+                    <div class="d-flex align-items-center justify-content-center position-relative">
+                        <img src="/static/Screenshot 2023-09-02 at 14.18.57.png" width="480" height="278" alt="Slide 2">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- Centered image container -->
+                    <div class="d-flex align-items-center justify-content-center position-relative">
+                        <img src="/static/Screenshot 2023-09-02 at 14.27.59.png" width="480" height="278" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Improved styling for the options -->
+        <ul class="options">
+            <li class="nav-item"><span class="emoji">👩‍🏫</span><a class="nav-link" href="{{ url_for('users') }}">See all Tutors</a></li>
+            <li class="nav-item"><span class="emoji">📚</span><a class="nav-link" href="{{ url_for('posts') }}">See all tutoring posts</a></li>
+            <li class="nav-item"><span class="emoji">👤</span><a class="nav-link" href="{{ url_for("my_profile") }}">Your profile<a></li>
+            <li class="nav-item"><span class="emoji">🏆</span><a class="nav-link" href="{{ url_for('leaderboard') }}">Leaderboard</a></li>
+            <li class="nav-item"><span class="emoji">✨</span><a class="nav-link" href="{{ url_for('register') }}">Create Account</a></li>
+            <li class="nav-item"><span class="emoji">🚪</span><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
